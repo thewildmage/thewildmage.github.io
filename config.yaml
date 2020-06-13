@@ -1,3 +1,39 @@
-baseURL: http://example.org/
+---
+baseURL: https://daine.dev/
 languageCode: en-us
-title: My New Hugo Site
+title: Daine
+theme: split
+disableKinds:
+  - section
+  - taxonomy
+  - taxonomyTerm
+  - RSS
+  - sitemap
+googleAnalytics: ""
+copyright: "&copy;2020 Daine"
+params:
+  author: Daine
+  custom:
+    css:
+      enable: true
+  description: >-
+    Daine codes themes and tools for forum RP sites, 
+    such as those hosted on Jcink.
+  shareImage: images/profile.png
+  favicon: favicon.ico
+  visual:
+    image:
+      enable: true
+      file: images/isolated-layout.svg
+      position: center center
+    video:
+      enable: false
+  links:
+    - list1:
+        heading: Connect
+        link:
+          - text: daine#1078
+          - text: Email
+            url: 'mailto:veralidaine.thewildmage@gmail.com'
+          - text: Magrathea
+            url: 'https://magrathea.guide'

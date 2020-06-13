@@ -1,0 +1,64 @@
+:root {
+    --color-bg: #EDF2F3;
+    --color-fg: #12262A;
+    --color-fg-2: #263a3e;
+    --color-gradient-1: #20484F;
+    --color-gradient-2: #4E9BAB;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+body,
+p,
+a,
+a:hover {
+  color: var(--color-fg);
+}
+
+body.page-template-page-fullsingle-split {
+    background-color: var(--color-bg);
+}
+
+body.page-template-page-fullsingle-split p {
+    color: var(--color-fg-2);
+}
+
+.split-intro h1 {
+    color: var(--color-gradient-2);
+}
+
+.split-intro .tagline {
+    color: var(--color-gradient-1);
+}
+
+.split-bio p {
+    color: var(--color-fg-2);
+}
+
+.split-bio a {
+    border-color: var(--color-gradient-1);
+    color: var(--color-gradient-1);
+}
+
+.split-bio a:hover {
+    border-color: var(--color-gradient-2);
+    color: var(--color-gradient-2);
+}
+
+.split-lists .split-list h3 {
+    color: var(--color-fg-2);
+}
+
+.split-lists .split-list ul li a {
+    color: var(--color-gradient-1);
+}
+
+.split-lists .split-list ul li a:hover {
+    color: var(--color-gradient-2);
+}
+
+.split-credit p a {
+    color: var(--color-gradient-2);
+}
