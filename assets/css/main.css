@@ -200,41 +200,23 @@ LEGOS
 */
 
 /* ----- BEWIDLERUM */
-a.bewilderum
-, a.bewilderum:link
-, a.bewilderum:visited {
+a.bewilderum {
+    background: var(--gradient);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    border-radius: 3px;
     color: var(--color-bg);
     padding: 0 0.25em;
     position: relative;
     text-decoration: none;
-}
-
-a.bewilderum::before
-, a.bewilderum:link::before
-, a.bewilderum:visited::before {
-    background: var(--gradient);
-    border-radius: 3px;
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: scaleY(1);
-    transform-origin: bottom;
     transition: 0.25s;
-    z-index: -1;
 }
 
 a.bewilderum:focus
 , a.bewilderum:hover
 , a.bewilderum:active {
-    color: var(--color-fg);
-}
-
-a.bewilderum:focus::before
-, a.bewilderum:hover::before
-, a.bewilderum:active::before {
-    transform: scaleY(0.1);
-    transition: 0.25s;
+    background-size: 100% 3px;
+    border-radius: 0;
+    color: var(--color-fg-primary);
 }
