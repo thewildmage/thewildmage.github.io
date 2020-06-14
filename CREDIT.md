@@ -1,9 +1,5 @@
-A running list of credits, to be more nicely formatted when the list is finalized.
+# CREDITS
+This file does not serve to replace or amend the [included licenses](LICENSE.md). This is a list of (non-licensing related) shoutouts to resources that were helpful in this project.
 
-font author: Bastien Sozeau
-font author site: http://sozoo.fr/
-
-icon designer: Saeful Muslim
-icon designer link: /rebelsaeful
-
-https://www.fantasynamegenerators.com/how-to-train-your-dragon-names.php
+- [Utopia](https://utopia.fyi/)
+- [Fantasy Name Generator's How to Train Your Dragon Name Generator](https://www.fantasynamegenerators.com/how-to-train-your-dragon-names.php)
