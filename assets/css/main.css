@@ -19,6 +19,8 @@ Code written by Daine
 
     --font-family-display: "YoungSerif", serif;
     --font-family-body: "Merriweather", serif;
+
+    --width-reading: 60ch;
 }
 
 *
@@ -31,6 +33,7 @@ body {
     background: var(--color-bg);
     color: var(--color-fg-primary);
     font-family: var(--font-family-body);
+    font-size: var(--step-0);
     hyphens: auto;
     line-height: 1.5;
     margin: 0;
@@ -40,9 +43,38 @@ body {
 
 /*
 -----
+RESET
+-----
+*/
+
+h1
+, h2
+, h3
+, h4
+, h5
+, h6 {
+    margin: 0;
+}
+
+p { margin: 0; }
+* + p { margin-top: 1em; }
+
+/*
+-----
 ELEMENTS
 -----
 */
+
+article {
+    max-width: var(--width-reading);
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+article > p:first-of-type { font-size: var(--step-1); }
+
 h1
 , h2
 , h3
@@ -50,10 +82,19 @@ h1
 , h5
 , h6 {
     font-family: var(--font-family-display);
+    font-weight: bold;
+    letter-spacing: 0.05em;
 }
 
+h1 { font-size: var(--step-4); line-height: 1.125; }
+h2 { font-size: var(--step-2); line-height: 1.25; }
+h3 { font-size: var(--step-1); }
+h4 { font-size: var(--step-0); }
+h5 { font-size: var(--step-0); }
+h6 { font-size: var(--step-0); }
+
 main {
-    padding: 1em;
+    padding: var(--step-0);
 }
 
 /*
@@ -61,6 +102,13 @@ main {
 LAYOUTS
 -----
 */
+
+/* ----- DAWNSTRIKER */
+.layout-center.dawnstriker {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
 /* ----- STORMBACK */
 .layout-sidebar.stormback {
