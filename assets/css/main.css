@@ -68,18 +68,20 @@ ELEMENTS
 -----
 */
 
-a 
-, a:link
-, a:visited {
-    color: var(--color-gradient-start);
-    text-decoration-style: dotted;
+a {
+    background: var(--gradient);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 100% 0;
+    color: var(--color-gradient-end);
+    text-decoration: none;
     transition: 0.25s;
 }
 
 a:focus
-, a:hover
-, a:active {
-    color: var(--color-gradient-end);
+, a:hover {
+    background-size: 100% 3px;
+    transform: translateY(-5px);
 }
 
 article {
@@ -183,6 +185,7 @@ LAYOUTS
 
 .layout-social.rumblebelly .__email {
     grid-area: email;
+    justify-self: center;
 }
 
 .layout-social.rumblebelly .__magrathea {
@@ -214,8 +217,7 @@ a.bewilderum {
 }
 
 a.bewilderum:focus
-, a.bewilderum:hover
-, a.bewilderum:active {
+, a.bewilderum:hover {
     background-size: 100% 3px;
     border-radius: 0;
     color: var(--color-fg-primary);
