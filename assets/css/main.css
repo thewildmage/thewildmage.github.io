@@ -17,12 +17,14 @@ Code written by Daine
     --color-gradient-start: #20484F;
     --color-gradient-end: #4E9BAB;
 
-    --font-family-display: "YoungSerif", georgia;
+    --font-family-display: "YoungSerif", serif;
+    --font-family-body: "Merriweather", serif;
 }
 
 body {
     background: var(--color-bg);
     color: var(--color-fg-primary);
+    font-family: var(--font-family-body);
 }
 
 h1 {
