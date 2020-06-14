@@ -174,12 +174,10 @@ LAYOUTS
 .layout-social.rumblebelly .__discord {
     align-items: center;
     display: flex;
+    flex-direction: column;
     grid-area: discord;
     justify-content: center;
-}
-
-.layout-social.rumblebelly .__discord img {
-    height: 1.5em;
+    max-height: 4em;
 }
 
 .layout-social.rumblebelly .__email {
