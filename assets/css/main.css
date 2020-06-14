@@ -76,7 +76,8 @@ a
     transition: 0.25s;
 }
 
-a:hover
+a:focus
+, a:hover
 , a:active {
     color: var(--color-gradient-end);
 }
@@ -225,12 +226,14 @@ a.bewilderum::before
     z-index: -1;
 }
 
-a.bewilderum:hover
+a.bewilderum:focus
+, a.bewilderum:hover
 , a.bewilderum:active {
     color: var(--color-fg);
 }
 
-a.bewilderum:hover::before
+a.bewilderum:focus::before
+, a.bewilderum:hover::before
 , a.bewilderum:active::before {
     transform: scaleY(0.1);
     transition: 0.25s;
