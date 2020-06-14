@@ -21,12 +21,62 @@ Code written by Daine
     --font-family-body: "Merriweather", serif;
 }
 
+*
+, *::before
+, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background: var(--color-bg);
     color: var(--color-fg-primary);
     font-family: var(--font-family-body);
+    hyphens: auto;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100vh;
+    text-align: justify;
 }
 
-h1 {
+/*
+-----
+ELEMENTS
+-----
+*/
+h1
+, h2
+, h3
+, h4
+, h5
+, h6 {
     font-family: var(--font-family-display);
+}
+
+main {
+    padding: 1em;
+}
+
+/*
+-----
+LAYOUTS
+-----
+*/
+
+/* ----- STORMBACK */
+.layout-sidebar.stormback {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout-sidebar.stormback > * {
+    flex: 1 1 40%;
+}
+
+.layout-sidebar.stormback .__sidebar {
+    background: url(../images/dragon.svg) center / auto 90% no-repeat;
+    min-width: 500px;
+}
+
+.layout-sidebar.stormback .__main {
+    background-color: teal;
 }
