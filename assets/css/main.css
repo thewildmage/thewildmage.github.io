@@ -139,16 +139,40 @@ LAYOUTS
 
 /* ----- RUMBLEBELLY */
 .layout-social.rumblebelly {
+    align-items: center;
     display: grid;
-    grid-gap: 1em;
+    font-size: var(--step--1);
+    grid-gap: var(--step-1);
+    grid-template-areas:
+        "discord magrathea"
+        "email email"
+        "bmc bmc"
+    ;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
-.layout-social.rumblebelly .__social-set {
+.layout-social.rumblebelly .__buy-me-a-coffee { grid-area: bmc; }
+
+.layout-social.rumblebelly .__discord {
     align-items: center;
     display: flex;
+    grid-area: discord;
     justify-content: center;
 }
 
-.layout-social.rumblebelly .__social-set img {
+.layout-social.rumblebelly .__discord img {
     height: 1.5em;
+}
+
+.layout-social.rumblebelly .__email {
+    grid-area: email;
+}
+
+.layout-social.rumblebelly .__magrathea {
+    grid-area: magrathea;
+}
+
+.layout-social.rumblebelly .__magrathea img {
+    height: 4em;
 }
