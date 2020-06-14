@@ -16,9 +16,15 @@ Code written by Daine
     --color-fg-secondary: #263a3e;
     --color-gradient-start: #20484F;
     --color-gradient-end: #4E9BAB;
+
+    --font-family-display: "YoungSerif", georgia;
 }
 
 body {
     background: var(--color-bg);
     color: var(--color-fg-primary);
+}
+
+h1 {
+    font-family: var(--font-family-display);
 }
