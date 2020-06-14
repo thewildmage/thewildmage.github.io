@@ -136,3 +136,19 @@ LAYOUTS
     background: url(../images/dragon.svg) center / auto 90% no-repeat;
     min-width: 500px;
 }
+
+/* ----- RUMBLEBELLY */
+.layout-social.rumblebelly {
+    display: grid;
+    grid-gap: 1em;
+}
+
+.layout-social.rumblebelly .__social-set {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.layout-social.rumblebelly .__social-set img {
+    height: 1.5em;
+}
