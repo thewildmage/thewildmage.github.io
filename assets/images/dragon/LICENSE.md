@@ -1,0 +1,3 @@
+The dragon icon used in this directory is licensed as [Creative Commons CCBY](https://creativecommons.org/licenses/by/3.0/). 
+
+I, Daine, have paid [The Noun Project](https://thenounproject.com) a license fee to use this icon without attribution. This license fee is NOT transferred herein; if you wish to use this icon in your own work, you will need to pay the license fee yourself or provide proper attribution per the terms of its license.
