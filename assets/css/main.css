@@ -68,6 +68,19 @@ ELEMENTS
 -----
 */
 
+a 
+, a:link
+, a:visited {
+    color: var(--color-gradient-start);
+    text-decoration-style: dotted;
+    transition: 0.25s;
+}
+
+a:hover
+, a:active {
+    color: var(--color-gradient-end);
+}
+
 article {
     max-width: var(--width-reading);
 }
@@ -179,4 +192,48 @@ LAYOUTS
 
 .layout-social.rumblebelly .__magrathea img {
     height: 4em;
+}
+
+/*
+-----
+LEGOS
+-----
+*/
+
+/* ----- BEWIDLERUM */
+a.bewilderum
+, a.bewilderum:link
+, a.bewilderum:visited {
+    color: var(--color-bg);
+    padding: 0 0.25em;
+    position: relative;
+    text-decoration: none;
+}
+
+a.bewilderum::before
+, a.bewilderum:link::before
+, a.bewilderum:visited::before {
+    background: var(--gradient);
+    border-radius: 3px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: 0.25s;
+    z-index: -1;
+}
+
+a.bewilderum:hover
+, a.bewilderum:active {
+    color: var(--color-fg);
+}
+
+a.bewilderum:hover::before
+, a.bewilderum:active::before {
+    transform: scaleY(0.1);
+    transition: 0.25s;
 }
