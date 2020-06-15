@@ -24,6 +24,7 @@ Code written by Daine
     --gradient-reverse: linear-gradient(25deg, var(--color-gradient-end), var(--color-gradient-start));
 
     --width-reading: 60ch;
+    --min-width-reading: 45ch;
 }
 
 *
@@ -45,6 +46,11 @@ h1
 , h5
 , h6 {
     margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 p { margin: 0; }
@@ -85,7 +91,8 @@ a:focus
 }
 
 article {
-    max-width: var(--width-reading);
+    max-width: min(var(--width-reading), 100%);
+    min-width: min(var(--min-width-reading), 100%);
 }
 
 article > * + * {
@@ -152,12 +159,15 @@ LAYOUTS
     flex: 1 1 40%;
 }
 
-.layout-sidebar.stormback .__sidebar { padding: 1em; }
+.layout-sidebar.stormback .__sidebar {
+    min-width: 350px;
+    padding: 1em;
+    max-width: 100%;
+ }
 
 .layout-sidebar.stormback .__sidebar img {
-    display: block;
     height: 100%;
-    min-height: 50vh;
+    min-height: 60vh;
     object-fit: contain;
     object-position: center;
     width: auto;
@@ -175,6 +185,7 @@ LAYOUTS
         "bmc bmc"
     ;
     justify-content: space-evenly;
+    min-width: min-content;
     text-align: center;
 }
 
@@ -186,8 +197,9 @@ LAYOUTS
     flex-direction: column;
     grid-area: discord;
     justify-content: center;
-    max-height: 4em;
 }
+
+.layout-social.rumblebelly .__discord img { height: 3em; }
 
 .layout-social.rumblebelly .__email {
     grid-area: email;
