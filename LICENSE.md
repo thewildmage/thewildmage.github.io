@@ -17,6 +17,9 @@ I, Daine, have paid The Noun Project a license fee to use this icon without attr
 The Discord icon comes from [Discord's press kit](https://discord.com/branding).
 
 ## Magrathea Assets
+The [planet icon](https://thenounproject.com/term/earth/23960/) used in the Magrathea logo was created by [Nikki Rodriguez](https://thenounproject.com/nrodriguezlima) of [The Noun Project](https://thenounproject.com) and is licensed as [Creative Commons CCBY](https://creativecommons.org/licenses/by/3.0/).
+
+The [Sling font](https://www.fontsquirrel.com/fonts/Sling) used in the Magrathea logo comes from [STAR Retrieval Systems](https://www.fontsquirrel.com/fonts/list/foundry/star-retrieval-systems) of [Font Squirrel](https://www.fontsquirrel.com) and falls under Font Squirrel's [Freeware License](https://www.fontsquirrel.com/license/Sling).
 
 ## All Else
 MIT License, except as noted
