@@ -154,6 +154,7 @@ LAYOUTS
 
 .layout-sidebar.stormback .__sidebar {
     background: url(../images/dragon/dragon.svg) center / auto 90% no-repeat;
+    min-height: 50vh;
     min-width: 500px;
 }
 
