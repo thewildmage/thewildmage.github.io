@@ -152,10 +152,15 @@ LAYOUTS
     flex: 1 1 40%;
 }
 
-.layout-sidebar.stormback .__sidebar {
-    background: url(../images/dragon/dragon.svg) center / auto 90% no-repeat;
+.layout-sidebar.stormback .__sidebar { padding: 1em; }
+
+.layout-sidebar.stormback .__sidebar img {
+    display: block;
+    height: 100%;
     min-height: 50vh;
-    min-width: 500px;
+    object-fit: contain;
+    object-position: center;
+    width: auto;
 }
 
 /* ----- RUMBLEBELLY */
