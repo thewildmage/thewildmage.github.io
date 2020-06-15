@@ -11,11 +11,11 @@ Code written by Daine
 */
 
 :root {
-    --color-bg: #EDF2F3;
-    --color-fg-primary: #12262A;
-    --color-fg-secondary: #263a3e;
-    --color-gradient-start: #20484F;
-    --color-gradient-end: #4E9BAB;
+    --color-bg: hsl(190, 20%, 94%);
+    --color-fg-primary: hsl(190, 40%, 12%);
+    --color-fg-secondary: hsl(190, 24%, 20%);
+    --color-gradient-start: hsl(189, 42%, 22%);
+    --color-gradient-end: hsl(190, 37%, 49%);
 
     --font-family-display: "YoungSerif", serif;
     --font-family-body: "Merriweather", serif;
