@@ -174,15 +174,17 @@ LAYOUTS
     grid-gap: var(--step-1);
     grid-template-areas:
         "discord    magrathea"
-        "email      email"
-        "bmc        bmc"
+        "coffee     coffee"
     ;
     justify-content: space-evenly;
     justify-items: center;
     text-align: center;
 }
 
-.layout-social.rumblebelly .__buy-me-a-coffee { grid-area: bmc; }
+.layout-social.rumblebelly .__coffee { grid-area: coffee; }
+.layout-social.rumblebelly .__coffee a.kofi-button:hover {
+    opacity: initial;
+}
 
 .layout-social.rumblebelly .__discord { grid-area: discord; }
 .layout-social.rumblebelly .__discord img { height: 3em; }
