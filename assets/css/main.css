@@ -78,7 +78,7 @@ a {
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 100% 0;
-    color: var(--color-gradient-end);
+    color: var(--color-gradient-start);
     display: inline-block;
     text-decoration: none;
     transition: 0.25s;
@@ -157,7 +157,7 @@ LAYOUTS
 }
 
 .layout-sidebar.stormback .__main {
-    min-width: min(min-content, 100%);
+    min-width: min(30ch, 100%);
 }
 
 .layout-sidebar.stormback .__sidebar {
@@ -171,9 +171,10 @@ LAYOUTS
     display: grid;
     font-size: var(--step--1);
     grid-gap: var(--step-1);
+    grid-auto-columns: minmax(0, 1fr);
     grid-template-areas:
-        "discord    magrathea"
-        "coffee     coffee"
+        "discord    camp    magrathea"
+        "coffee     coffee  coffee"
     ;
     justify-content: space-evenly;
     justify-items: center;
@@ -189,6 +190,13 @@ LAYOUTS
 .layout-social.rumblebelly .__discord img { height: 3em; }
 
 .layout-social.rumblebelly .__email { grid-area: email; }
+
+.layout-social.rumblebelly .__coding-camp { grid-area: camp; }
+
+.layout-social.rumblebelly .__coding-camp img {
+    height: 48px;
+    width: auto;
+}
 
 .layout-social.rumblebelly .__magrathea { grid-area: magrathea; }
 
