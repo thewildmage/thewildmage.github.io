@@ -4,10 +4,104 @@ UTOPIA
 -----
 Courtesy of https://utopia.fyi/
 
-@link https://utopia.fyi/type/calculator?c=320,17,1.2,1500,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
 */
 
+/* ----- TYPE */
+/* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1500,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 :root {
+    --utopia-min-width: 320;
+    --utopia-min-size: 17;
+    --utopia-min-scale: 1.2;
+
+    --utopia-max-width: 1500;
+    --utopia-max-size: 20;
+    --utopia-max-scale: 1.333;
+
+    /*
+    y = mx + b
+    y - mx = b
+
+    x-axis = screen width
+    y-axis = type size OR scale
+    use clamp's center to solve for y when x = 100vw
+
+    m = rise / run
+    b = intercept
+    */
+
+    /* solve for type size */
+    --utopia-type-slope: calc(
+        (var(--utopia-max-size) - var(--utopia-min-size)) /
+            (var(--utopia-max-width) - var(--utopia-min-width))
+    );
+    --utopia-type-intercept: calc(
+        var(--utopia-max-size) - var(--utopia-type-slope) *
+            var(--utopia-max-width)
+    );
+    --type-target: var(--utopia-type-slope) * 100vw +
+        var(--utopia-type-intercept);
+
+    /* solve for scale */
+    --utopia-scale-slope: calc(
+        (var(--utopia-max-scale) - var(--utopia-min-scale)) /
+            (var(--utopia-max-width) - var(--utopia-min-width))
+    );
+    --utopia-scale-intercept: calc(
+        var(--utopia-max-scale) - var(--utopia-scale-slope) *
+            var(--utopia-max-width)
+    );
+    --scale-target: var(--utopia-scale-slope) * 100vw +
+        var(--utopia-scale-intercept);
+
+    /* apply */
+    --type-400-min: var(--utopia-min-size) / 16 * 1rem;
+    --type-400-max: var(--utopia-max-size) / 16 * 1rem;
+
+    --type-400: clamp(
+        var(--type-400-min),
+        ,
+        var(--type-target) var(--type-400-max)
+    );
+    --type-500: clamp(
+        var(--type-400-min) * var(--utopia-min-scale),
+        var(--type-target) * var(--scale-target),
+        var(--type-400-max) * var(--utopia-max-scale)
+    );
+
+    /* ANOTHER ATTEMPT */
+    --utopia-run: (var(--utopia-max-width) - var(--utopia-min-width));
+
+    /* do the math */
+    --type-400-min: var(--utopia-min-size) / 16 * 1rem;
+    --type-400-max: var(--utopia-max-size) / 16 * 1rem;
+    --type-400-slope: calc(
+        (var(--utopia-max-size) - var(--utopia-min-size)) / var(--utopia-run)
+    );
+    --type-400-intercept: calc(
+        var(--utopia-max-size) - var(--type-400-slope) * var(--utopia-max-width)
+    );
+
+    --type-500-min: var(--type-400-min) * var(--utopia-min-scale);
+    --type-500-max: var(--type-400-max) * var(--utopia-max-scale);
+    --type-500-slope: calc(
+        (var(--type-500-max) - var(--type-500-min)) / var(--utopia-run)
+    );
+    --type-500-intercept: calc(
+        var(--type-500-max) - var(--type-500-slope) * var(--utopia-max-width)
+    );
+
+    /* apply */
+    --type-400: clamp(
+        var(--type-400-min),
+        var(--type-400-slope) * 100vw + var(--type-400-intercept),
+        var(--type-400-max)
+    );
+    --type-500: clamp(
+        var(--type-500-min),
+        var(--type-500-slope) * 100vw + var(--type-500-intercept),
+        var(--type-500-max)
+    );
+
     --step--2: clamp(0.74rem, 0.75rem + -0.05vw, 0.7rem);
     --step--1: clamp(0.89rem, 0.87rem + 0.07vw, 0.94rem);
     --step-0: clamp(1.06rem, 1.01rem + 0.25vw, 1.25rem);
