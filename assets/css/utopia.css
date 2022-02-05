@@ -30,16 +30,26 @@ Courtesy of https://utopia.fyi/
     */
 
     /* solve for type size */
-    --utopia-type-slope: calc(
+    --utopia-type-slope: (
         (var(--utopia-max-size) - var(--utopia-min-size)) /
             (var(--utopia-max-width) - var(--utopia-min-width))
     );
-    --utopia-type-intercept: calc(
+    /* --utopia-type-slope: calc((20 - 17) / (1500 - 320)); */
+    /* (20 - 17) / (1500 - 320) = 0.00254 */
+    --utopia-type-intercept: (
         var(--utopia-max-size) - var(--utopia-type-slope) *
             var(--utopia-max-width)
     );
+    /* --utopia-type-intercept: calc(20 - ((20 - 17) / (1500 - 320)) * 1500); */
+    /* 20 - 0.00254 * 1500 = 16.186 */
+
+    /* --type-target: var(--utopia-type-slope) * 100vw +
+        var(--utopia-type-intercept); */
+    /* --type-target: calc(((20 - 17) / (1500 - 320)) * 100vw + (20 - ((20 - 17) / (1500 - 320)) * 1500)); */
+    /* 100vw = 1440px */
+    /* 0.00254 * 1440px + 16.186 */
     --type-target: var(--utopia-type-slope) * 100vw +
-        var(--utopia-type-intercept);
+        (var(--utopia-type-intercept) / 16 * 1rem);
 
     /* solve for scale */
     --utopia-scale-slope: calc(
@@ -50,12 +60,13 @@ Courtesy of https://utopia.fyi/
         var(--utopia-max-scale) - var(--utopia-scale-slope) *
             var(--utopia-max-width)
     );
-    --scale-target: var(--utopia-scale-slope) * 100vw +
-        var(--utopia-scale-intercept);
+    --scale-target: calc(
+        var(--utopia-scale-slope) * 100vw + var(--utopia-scale-intercept)
+    );
 
     /* apply */
-    --type-400-min: var(--utopia-min-size) / 16 * 1rem;
-    --type-400-max: var(--utopia-max-size) / 16 * 1rem;
+    --type-400-min: calc(var(--utopia-min-size) / 16 * 1rem);
+    --type-400-max: calc(var(--utopia-max-size) / 16 * 1rem);
 
     --type-400: clamp(
         var(--type-400-min),
@@ -109,3 +120,6 @@ Courtesy of https://utopia.fyi/
     --step-4: clamp(2.2rem, 1.73rem + 2.36vw, 3.95rem);
     --step-5: clamp(2.64rem, 1.93rem + 3.55vw, 5.26rem);
 }
+
+/* ----- SPACE */
+/* @link https://utopia.fyi/space/calculator?c=320,17,1.2,1500,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
