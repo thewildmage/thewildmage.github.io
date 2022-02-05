@@ -352,36 +352,123 @@ Inspired by https://utopia.fyi/
     );
 
     /* One-up pairs */
-    --space-3xs-2xs: calc(
-        ((var(--fc-3xs-min) / 16) * 1rem) +
-            (var(--fc-2xs-max) - var(--fc-3xs-min)) * var(--fluid-bp)
+    /* 100-200 */
+    --utopia-space-100-200-slope: (
+        (var(--space-200-max) - var(--space-100-min)) / var(--utopia-run)
     );
-    --space-2xs-xs: calc(
-        ((var(--fc-2xs-min) / 16) * 1rem) +
-            (var(--fc-xs-max) - var(--fc-2xs-min)) * var(--fluid-bp)
+    --utopia-space-100-200-intercept: (
+        var(--space-200-max) - var(--utopia-space-100-200-slope) *
+            var(--utopia-max-width)
     );
-    --space-xs-s: calc(
-        ((var(--fc-xs-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-xs-min)) *
-            var(--fluid-bp)
+    --space-100-200: clamp(
+        var(--space-100-min) / 16 * 1rem,
+        var(--utopia-space-100-200-slope) * 100vw +
+            (var(--utopia-space-100-200-intercept) / 16 * 1rem),
+        var(--space-200-max) / 16 * 1rem
     );
-    --space-s-m: calc(
-        ((var(--fc-s-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-s-min)) *
-            var(--fluid-bp)
+
+    /* 200-300 */
+    --utopia-space-200-300-slope: (
+        (var(--space-300-max) - var(--space-200-min)) / var(--utopia-run)
     );
-    --space-m-l: calc(
-        ((var(--fc-m-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-m-min)) *
-            var(--fluid-bp)
+    --utopia-space-200-300-intercept: (
+        var(--space-300-max) - var(--utopia-space-200-300-slope) *
+            var(--utopia-max-width)
     );
-    --space-l-xl: calc(
-        ((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) *
-            var(--fluid-bp)
+    --space-200-300: clamp(
+        var(--space-200-min) / 16 * 1rem,
+        var(--utopia-space-200-300-slope) * 100vw +
+            (var(--utopia-space-200-300-intercept) / 16 * 1rem),
+        var(--space-300-max) / 16 * 1rem
     );
-    --space-xl-2xl: calc(
-        ((var(--fc-xl-min) / 16) * 1rem) +
-            (var(--fc-2xl-max) - var(--fc-xl-min)) * var(--fluid-bp)
+
+    /* 300-400 */
+    --utopia-space-300-400-slope: (
+        (var(--space-400-max) - var(--space-300-min)) / var(--utopia-run)
     );
-    --space-2xl-3xl: calc(
-        ((var(--fc-2xl-min) / 16) * 1rem) +
-            (var(--fc-3xl-max) - var(--fc-2xl-min)) * var(--fluid-bp)
+    --utopia-space-300-400-intercept: (
+        var(--space-400-max) - var(--utopia-space-300-400-slope) *
+            var(--utopia-max-width)
+    );
+    --space-300-400: clamp(
+        var(--space-300-min) / 16 * 1rem,
+        var(--utopia-space-300-400-slope) * 100vw +
+            (var(--utopia-space-300-400-intercept) / 16 * 1rem),
+        var(--space-400-max) / 16 * 1rem
+    );
+
+    /* 400-500 */
+    --utopia-space-400-500-slope: (
+        (var(--space-500-max) - var(--space-400-min)) / var(--utopia-run)
+    );
+    --utopia-space-400-500-intercept: (
+        var(--space-500-max) - var(--utopia-space-400-500-slope) *
+            var(--utopia-max-width)
+    );
+    --space-400-500: clamp(
+        var(--space-400-min) / 16 * 1rem,
+        var(--utopia-space-400-500-slope) * 100vw +
+            (var(--utopia-space-400-500-intercept) / 16 * 1rem),
+        var(--space-500-max) / 16 * 1rem
+    );
+
+    /* 500-600 */
+    --utopia-space-500-600-slope: (
+        (var(--space-600-max) - var(--space-500-min)) / var(--utopia-run)
+    );
+    --utopia-space-500-600-intercept: (
+        var(--space-600-max) - var(--utopia-space-500-600-slope) *
+            var(--utopia-max-width)
+    );
+    --space-500-600: clamp(
+        var(--space-500-min) / 16 * 1rem,
+        var(--utopia-space-500-600-slope) * 100vw +
+            (var(--utopia-space-500-600-intercept) / 16 * 1rem),
+        var(--space-600-max) / 16 * 1rem
+    );
+
+    /* 600-700 */
+    --utopia-space-600-700-slope: (
+        (var(--space-700-max) - var(--space-600-min)) / var(--utopia-run)
+    );
+    --utopia-space-600-700-intercept: (
+        var(--space-700-max) - var(--utopia-space-600-700-slope) *
+            var(--utopia-max-width)
+    );
+    --space-600-700: clamp(
+        var(--space-600-min) / 16 * 1rem,
+        var(--utopia-space-600-700-slope) * 100vw +
+            (var(--utopia-space-600-700-intercept) / 16 * 1rem),
+        var(--space-700-max) / 16 * 1rem
+    );
+
+    /* 700-800 */
+    --utopia-space-700-800-slope: (
+        (var(--space-800-max) - var(--space-700-min)) / var(--utopia-run)
+    );
+    --utopia-space-700-800-intercept: (
+        var(--space-800-max) - var(--utopia-space-700-800-slope) *
+            var(--utopia-max-width)
+    );
+    --space-700-800: clamp(
+        var(--space-700-min) / 16 * 1rem,
+        var(--utopia-space-700-800-slope) * 100vw +
+            (var(--utopia-space-700-800-intercept) / 16 * 1rem),
+        var(--space-800-max) / 16 * 1rem
+    );
+
+    /* 800-900 */
+    --utopia-space-800-900-slope: (
+        (var(--space-900-max) - var(--space-800-min)) / var(--utopia-run)
+    );
+    --utopia-space-800-900-intercept: (
+        var(--space-900-max) - var(--utopia-space-800-900-slope) *
+            var(--utopia-max-width)
+    );
+    --space-800-900: clamp(
+        var(--space-800-min) / 16 * 1rem,
+        var(--utopia-space-800-900-slope) * 100vw +
+            (var(--utopia-space-800-900-intercept) / 16 * 1rem),
+        var(--space-900-max) / 16 * 1rem
     );
 }
