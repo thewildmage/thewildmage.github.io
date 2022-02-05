@@ -36,13 +36,59 @@ Inspired by https://utopia.fyi/
     --utopia-run: (var(--utopia-max-width) - var(--utopia-min-width));
 
     /* scale */
+    --type-200-min: var(--type-300-min) / var(--utopia-min-scale);
+    --type-200-max: var(--type-300-max) / var(--utopia-max-scale);
+
+    --type-300-min: var(--type-400-min) / var(--utopia-min-scale);
+    --type-300-max: var(--type-400-max) / var(--utopia-max-scale);
+
     --type-400-min: var(--utopia-min-size);
     --type-400-max: var(--utopia-max-size);
 
     --type-500-min: var(--type-400-min) * var(--utopia-min-scale);
     --type-500-max: var(--type-400-max) * var(--utopia-max-scale);
 
+    --type-600-min: var(--type-500-min) * var(--utopia-min-scale);
+    --type-600-max: var(--type-500-max) * var(--utopia-max-scale);
+
+    --type-700-min: var(--type-600-min) * var(--utopia-min-scale);
+    --type-700-max: var(--type-600-max) * var(--utopia-max-scale);
+
+    --type-800-min: var(--type-700-min) * var(--utopia-min-scale);
+    --type-800-max: var(--type-700-max) * var(--utopia-max-scale);
+
+    --type-900-min: var(--type-800-min) * var(--utopia-min-scale);
+    --type-900-max: var(--type-800-max) * var(--utopia-max-scale);
+
     /* solve for type size */
+    /* 200 */
+    --utopia-200-slope: (
+        (var(--type-200-max) - var(--type-200-min)) / var(--utopia-run)
+    );
+    --utopia-200-intercept: (
+        var(--type-200-max) - var(--utopia-200-slope) * var(--utopia-max-width)
+    );
+    --type-200: clamp(
+        var(--type-200-min) / 16 * 1rem,
+        var(--utopia-200-slope) * 100vw +
+            (var(--utopia-200-intercept) / 16 * 1rem),
+        var(--type-200-max) / 16 * 1rem
+    );
+
+    /* 300 */
+    --utopia-300-slope: (
+        (var(--type-300-max) - var(--type-300-min)) / var(--utopia-run)
+    );
+    --utopia-300-intercept: (
+        var(--type-300-max) - var(--utopia-300-slope) * var(--utopia-max-width)
+    );
+    --type-300: clamp(
+        var(--type-300-min) / 16 * 1rem,
+        var(--utopia-300-slope) * 100vw +
+            (var(--utopia-300-intercept) / 16 * 1rem),
+        var(--type-300-max) / 16 * 1rem
+    );
+
     /* 400 */
     --utopia-400-slope: (
         (var(--utopia-max-size) - var(--utopia-min-size)) / var(--utopia-run)
@@ -70,6 +116,62 @@ Inspired by https://utopia.fyi/
         var(--utopia-500-slope) * 100vw +
             (var(--utopia-500-intercept) / 16 * 1rem),
         var(--type-500-max) / 16 * 1rem
+    );
+
+    /* 600 */
+    --utopia-600-slope: (
+        (var(--type-600-max) - var(--type-600-min)) / var(--utopia-run)
+    );
+    --utopia-600-intercept: (
+        var(--type-600-max) - var(--utopia-600-slope) * var(--utopia-max-width)
+    );
+    --type-600: clamp(
+        var(--type-600-min) / 16 * 1rem,
+        var(--utopia-600-slope) * 100vw +
+            (var(--utopia-600-intercept) / 16 * 1rem),
+        var(--type-600-max) / 16 * 1rem
+    );
+
+    /* 700 */
+    --utopia-700-slope: (
+        (var(--type-700-max) - var(--type-700-min)) / var(--utopia-run)
+    );
+    --utopia-700-intercept: (
+        var(--type-700-max) - var(--utopia-700-slope) * var(--utopia-max-width)
+    );
+    --type-700: clamp(
+        var(--type-700-min) / 16 * 1rem,
+        var(--utopia-700-slope) * 100vw +
+            (var(--utopia-700-intercept) / 16 * 1rem),
+        var(--type-700-max) / 16 * 1rem
+    );
+
+    /* 800 */
+    --utopia-800-slope: (
+        (var(--type-800-max) - var(--type-800-min)) / var(--utopia-run)
+    );
+    --utopia-800-intercept: (
+        var(--type-800-max) - var(--utopia-800-slope) * var(--utopia-max-width)
+    );
+    --type-800: clamp(
+        var(--type-800-min) / 16 * 1rem,
+        var(--utopia-800-slope) * 100vw +
+            (var(--utopia-800-intercept) / 16 * 1rem),
+        var(--type-800-max) / 16 * 1rem
+    );
+
+    /* 900 */
+    --utopia-900-slope: (
+        (var(--type-900-max) - var(--type-900-min)) / var(--utopia-run)
+    );
+    --utopia-900-intercept: (
+        var(--type-900-max) - var(--utopia-900-slope) * var(--utopia-max-width)
+    );
+    --type-900: clamp(
+        var(--type-900-min) / 16 * 1rem,
+        var(--utopia-900-slope) * 100vw +
+            (var(--utopia-900-intercept) / 16 * 1rem),
+        var(--type-900-max) / 16 * 1rem
     );
 }
 
