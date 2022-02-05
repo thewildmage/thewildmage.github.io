@@ -59,8 +59,8 @@ Courtesy of https://utopia.fyi/
 
     --type-400: clamp(
         var(--type-400-min),
-        ,
-        var(--type-target) var(--type-400-max)
+        var(--type-target),
+        var(--type-400-max)
     );
     --type-500: clamp(
         var(--type-400-min) * var(--utopia-min-scale),
@@ -69,9 +69,8 @@ Courtesy of https://utopia.fyi/
     );
 
     /* ANOTHER ATTEMPT */
-    --utopia-run: (var(--utopia-max-width) - var(--utopia-min-width));
+    /* --utopia-run: (var(--utopia-max-width) - var(--utopia-min-width));
 
-    /* do the math */
     --type-400-min: var(--utopia-min-size) / 16 * 1rem;
     --type-400-max: var(--utopia-max-size) / 16 * 1rem;
     --type-400-slope: calc(
@@ -90,7 +89,6 @@ Courtesy of https://utopia.fyi/
         var(--type-500-max) - var(--type-500-slope) * var(--utopia-max-width)
     );
 
-    /* apply */
     --type-400: clamp(
         var(--type-400-min),
         var(--type-400-slope) * 100vw + var(--type-400-intercept),
@@ -100,7 +98,7 @@ Courtesy of https://utopia.fyi/
         var(--type-500-min),
         var(--type-500-slope) * 100vw + var(--type-500-intercept),
         var(--type-500-max)
-    );
+    ); */
 
     --step--2: clamp(0.74rem, 0.75rem + -0.05vw, 0.7rem);
     --step--1: clamp(0.89rem, 0.87rem + 0.07vw, 0.94rem);
