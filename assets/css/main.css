@@ -22,7 +22,7 @@ body {
     --body-padding: var(--space-100-200);
 
     background-color: var(--color-primary);
-    color: var(--color-light);
+    color: var(--color-dark);
     font-family: var(--font-family-body);
     font-size: var(--type-400);
 }
@@ -121,23 +121,35 @@ BLOCKS
 }
 
 .reading-bg {
-    background-color: hsl(var(--color-dark-raw) / var(--opacity-faint));
-    /* position: relative; */
+    /* background-color: hsl(var(--color-dark-raw) / var(--opacity-faint)); */
+    position: relative;
     padding: var(--space-400);
 }
 
-/* .reading-bg::before {
+.reading-bg::before {
     background: linear-gradient(
         to right,
         transparent,
-        hsl(var(--color-dark-raw) / var(--opacity-faint)) 33%
+        var(--color-secondary) 33%
     );
     content: "";
     inset-block: 0;
     inset-inline: -50% 0;
     position: absolute;
     z-index: -1;
-} */
+}
+
+@media (max-width: 90ch) {
+    .reading-bg::before {
+        background: linear-gradient(
+            to bottom,
+            transparent,
+            var(--color-secondary) 50vh
+        );
+        inset-block: -50vh 0;
+        inset-inline: 0;
+    }
+}
 
 .sidebar {
     display: flex;
