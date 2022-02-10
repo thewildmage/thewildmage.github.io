@@ -12,7 +12,15 @@ I, Cecilia, have paid The Noun Project a license fee to use this icon without at
 
 ## Discord Icon
 
-The Discord icon comes from [Discord's press kit](https://discord.com/branding).
+The Discord icon comes from [Discord's media kit](https://discord.com/branding).
+
+## Ko-fi Icon
+
+The Ko-fi icon comes from [Ko-fi's creator kit](https://more.ko-fi.com/brand-assets).
+
+## GitHub Icon
+
+The GitHub icon comes from [GitHub Logos and Usage](https://github.com/logos).
 
 ## Magrathea Assets
 
