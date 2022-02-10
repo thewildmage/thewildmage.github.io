@@ -12,8 +12,13 @@
 }
 
 body {
+    --body-padding: var(--space-100-200);
+
+    background-color: var(--color-light);
+    color: var(--color-dark);
     font-family: var(--font-family-body);
     font-size: var(--type-400);
+    padding: var(--body-padding);
 }
 
 h1,
@@ -26,6 +31,7 @@ h6 {
 }
 
 h1 {
+    color: var(--color-primary);
     font-size: var(--type-900);
 }
 
@@ -49,17 +55,20 @@ h6 {
     font-size: var(--type-400);
 }
 
-/* TODO: Remove. This is temporary to make things easier to work with. */
-img,
-svg {
-    max-height: 300px;
-}
-
 /*
 -----
 BLOCKS
 -----
 */
+.aesthetic-feature {
+    max-height: calc(100vh - 2 * var(--body-padding));
+    object-fit: contain;
+}
+
+.icon {
+    max-block-size: var(--type-700);
+}
+
 .reading {
     max-inline-size: var(--measure-target);
 }
@@ -81,6 +90,11 @@ BLOCKS
     flex-grow: 1;
 }
 
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr));
+}
+
 /*
 -----
 UTILITIES
@@ -88,4 +102,15 @@ UTILITIES
 */
 .utility-flow > * + * {
     margin-block-start: var(--space-400);
+}
+
+.utility-font-family-display {
+    font-family: var(--font-family-display);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .utility-sticky {
+        inset-block-start: var(--body-padding);
+        position: sticky;
+    }
 }
