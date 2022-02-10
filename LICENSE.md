@@ -1,26 +1,30 @@
 # Licenses
 
-While much of the content of this repository is shared under the terms of the MIT license, some parts of it are not and are subject to their own licensing terms, as noted here.
+Content in this repository falls under multiple different licenses.
 
-Different licenses may also be found within various directories within this repository. Where a separate license is provided within a directory, that license supercedes and fully replaces the ["All Else"](#all-else) license below, and applies to all contents in the same and any nested directories.
+Where a separate license is provided within a directory, that license supercedes and fully replaces the ["Remaining"](#remaining) license below, and applies to all contents in the same and any nested directories.
+
+## Social Icons
+
+The following social icons are used in accordance with their company's press or branding kits:
+
+-   The [Discord](https://discord.com) icon comes from [Discord's media kit](https://discord.com/branding)
+-   The [GitHub](https://github.com) icon comes from [GitHub Logos and Usage](https://github.com/logos)
+-   The [Ko-fi](https://ko-fi.com) icon comes from [Ko-fi's creator kit](https://more.ko-fi.com/brand-assets)
+
+All rights reserved.
+
+## Coding Camp
+
+The Coding Camp icon comes from the [Coding Camp Discord Server](https://discord.gg/udQ5WsqpME).
+
+All rights reserved.
 
 ## Dragon Icon
 
 The [dragon icon](https://thenounproject.com/icon/2266440/) was created by [Saeful Muslim](https://thenounproject.com/rebelsaeful) of [The Noun Project](https://thenounproject.com) and is licensed under [Creative Commons CCBY](https://creativecommons.org/licenses/by/3.0/).
 
 I, Cecilia, have paid The Noun Project a license fee to use this icon without attribution. This license fee is NOT transferred herein; if you wish to use this icon in your own work, you will need to pay the license fee yourself or provide proper attribution per the terms of its license.
-
-## Discord Icon
-
-The Discord icon comes from [Discord's media kit](https://discord.com/branding).
-
-## Ko-fi Icon
-
-The Ko-fi icon comes from [Ko-fi's creator kit](https://more.ko-fi.com/brand-assets).
-
-## GitHub Icon
-
-The GitHub icon comes from [GitHub Logos and Usage](https://github.com/logos).
 
 ## Magrathea Assets
 
@@ -30,7 +34,7 @@ I, Cecilia, have paid The Noun Project a license fee to use this icon without at
 
 The [Sling font](https://www.fontsquirrel.com/fonts/Sling) used in the Magrathea logo comes from [STAR Retrieval Systems](https://www.fontsquirrel.com/fonts/list/foundry/star-retrieval-systems) of [Font Squirrel](https://www.fontsquirrel.com) and falls under Font Squirrel's [Freeware License](https://www.fontsquirrel.com/license/Sling).
 
-## All Else
+## Remaining
 
 Minus the above listed exceptions, all remaining is licensed as follows:
 
