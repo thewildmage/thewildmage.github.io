@@ -36,6 +36,13 @@ I, Cecilia, have paid The Noun Project a license fee to use this icon without at
 
 The [Sling font](https://www.fontsquirrel.com/fonts/Sling) used in the Magrathea logo comes from [STAR Retrieval Systems](https://www.fontsquirrel.com/fonts/list/foundry/star-retrieval-systems) of [Font Squirrel](https://www.fontsquirrel.com) and falls under Font Squirrel's [Freeware License](https://www.fontsquirrel.com/license/Sling).
 
+## Fonts
+
+The following fonts are used:
+
+-   [Merriweather](https://fonts.google.com/specimen/Merriweather) by Sorkin Type, licensed under the [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL)
+-   [Young Serif](https://github.com/noirblancrouge/YoungSerif) by Noir Blanc Rouge, licensed under the [SIL Open Font License, Version 1.1](https://github.com/noirblancrouge/YoungSerif/blob/9d072345d60ec0b87fcc22bdeca84e62222edfbd/LICENSE.txt)
+
 ## Remaining
 
 Minus the above listed exceptions, all remaining is licensed as follows:
