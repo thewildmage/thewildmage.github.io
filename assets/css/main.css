@@ -121,20 +121,16 @@ BLOCKS
 }
 
 .reading-bg {
-    /* background-color: hsl(var(--color-dark-raw) / var(--opacity-faint)); */
+    background-color: var(--color-secondary);
     position: relative;
     padding: var(--space-400);
 }
 
 .reading-bg::before {
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--color-secondary) 33%
-    );
+    background: linear-gradient(to right, transparent, var(--color-secondary));
     content: "";
     inset-block: 0;
-    inset-inline: -50% 0;
+    inset-inline: -50% 100%;
     position: absolute;
     z-index: -1;
 }
@@ -144,9 +140,9 @@ BLOCKS
         background: linear-gradient(
             to bottom,
             transparent,
-            var(--color-secondary) 50vh
+            var(--color-secondary)
         );
-        inset-block: -50vh 0;
+        inset-block: -50vh 100%;
         inset-inline: 0;
     }
 }
