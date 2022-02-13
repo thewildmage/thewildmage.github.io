@@ -167,7 +167,8 @@ BLOCKS
 }
 
 .reading-bg {
-    --color-bg-local: var(--color-secondary);
+    --color-bg-local-raw: var(--color-secondary-raw);
+    --color-bg-local: hsl(var(--color-bg-local-raw));
 
     background-color: var(--color-bg-local);
     position: relative;
@@ -175,7 +176,11 @@ BLOCKS
 }
 
 .reading-bg::before {
-    background: linear-gradient(to right, transparent, var(--color-bg-local));
+    background: linear-gradient(
+        to right,
+        hsl(var(--color-bg-local-raw) / 0),
+        var(--color-bg-local)
+    ); /* can't use transparent here because of Safari */
     content: "";
     inset-block: 0;
     inset-inline: -50% 100%;
