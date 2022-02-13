@@ -1,12 +1,17 @@
 :root {
+    --color-primary-hs: 343deg 47%;
+
     --color-dark-raw: 18deg 12% 16%;
     --color-light-raw: 47deg 26% 86%;
-    --color-primary-raw: 343deg 47% 49%;
+    --color-primary-raw: var(--color-primary-hs) 49%;
     --color-secondary-raw: 198deg 35% 56%;
 
     --color-dark: hsl(var(--color-dark-raw));
     --color-light: hsl(var(--color-light-raw));
     --color-primary: hsl(var(--color-primary-raw));
+    --color-primary-darker: hsl(
+        var(--color-primary-hs) 23%
+    ); /* anything higher than 23% fails contrast guidelines */
     --color-secondary: hsl(var(--color-secondary-raw));
 
     --font-family-display: "YoungSerif", serif;
@@ -134,11 +139,16 @@ BLOCKS
 @media (prefers-reduced-motion: no-preference) {
     .link[data-variant="bewilderum"] {
         background: linear-gradient(var(--color-dark), var(--color-dark));
+        background: linear-gradient(
+            to bottom right,
+            var(--color-primary-darker),
+            var(--color-dark)
+        );
         background-position: bottom;
         background-repeat: repeat-x;
         background-size: 100% 100%;
         border-radius: 3px;
-        color: var(--color-background-local, var(--color-secondary));
+        color: var(--color-bg-local, var(--color-secondary));
         padding-block: 0.1ch;
         padding-inline: 0.25ch;
         text-decoration: none;
