@@ -131,23 +131,25 @@ BLOCKS
     object-fit: contain;
 }
 
-.link[data-variant="bewilderum"] {
-    background: linear-gradient(var(--color-dark), var(--color-dark));
-    background-position: bottom;
-    background-repeat: repeat-x;
-    background-size: 100% 100%;
-    border-radius: 3px;
-    color: var(--color-background-local, var(--color-secondary));
-    padding-block: 0.1ch;
-    padding-inline: 0.25ch;
-    text-decoration: none;
-}
+@media (prefers-reduced-motion: no-preference) {
+    .link[data-variant="bewilderum"] {
+        background: linear-gradient(var(--color-dark), var(--color-dark));
+        background-position: bottom;
+        background-repeat: repeat-x;
+        background-size: 100% 100%;
+        border-radius: 3px;
+        color: var(--color-background-local, var(--color-secondary));
+        padding-block: 0.1ch;
+        padding-inline: 0.25ch;
+        text-decoration: none;
+    }
 
-.link[data-variant="bewilderum"]:focus,
-.link[data-variant="bewilderum"]:hover {
-    background-size: 100% 0.2ch;
-    border-radius: 0;
-    color: inherit;
+    .link[data-variant="bewilderum"]:focus,
+    .link[data-variant="bewilderum"]:hover {
+        background-size: 100% 0.2ch;
+        border-radius: 0;
+        color: inherit;
+    }
 }
 
 .reading {
