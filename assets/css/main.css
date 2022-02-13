@@ -98,12 +98,6 @@ BLOCKS
 }
 
 .half-and-half {
-    /* background: linear-gradient(
-        to right,
-        hsl(var(--color-dark-raw) / 0),
-        33%,
-        hsl(var(--color-dark-raw) / var(--opacity-faint)) 50%
-    ); */
     display: grid;
     gap: var(--space-400-500);
     grid-template-columns: 1fr 1fr;
@@ -112,21 +106,7 @@ BLOCKS
 /* 2 * --measure-min */
 @media (max-width: 90ch) {
     .half-and-half {
-        /* background: skyblue; */
         grid-template-columns: 1fr;
-    }
-
-    .half-and-half > * {
-        /* background-color: hsl(var(--color-dark-raw) / var(--opacity-faint)); */
-    }
-
-    .half-and-half > :first-child {
-        /* background: linear-gradient(
-            to bottom,
-            transparent,
-            75%,
-            hsl(var(--color-dark-raw) / var(--opacity-faint))
-        ); */
     }
 }
 
