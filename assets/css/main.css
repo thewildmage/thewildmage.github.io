@@ -126,7 +126,9 @@ BLOCKS
 }
 
 .icon {
-    max-block-size: var(--type-700);
+    aspect-ratio: 1 / 1;
+    block-size: var(--type-500);
+    object-fit: contain;
 }
 
 .link[data-variant="bewilderum"] {
