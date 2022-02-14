@@ -119,6 +119,12 @@ BLOCKS
     object-fit: contain;
 }
 
+.labeled-icon {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-100-200);
+}
+
 .lineup {
     display: flex;
     flex-wrap: wrap;
