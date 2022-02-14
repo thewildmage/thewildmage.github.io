@@ -208,28 +208,6 @@ BLOCKS
     }
 }
 
-.sidebar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-300);
-}
-
-.sidebar .sidebar__main {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-inline-size: 50%;
-}
-
-.sidebar .sidebar__side {
-    flex-basis: var(--measure-min);
-    flex-grow: 1;
-}
-
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr));
-}
-
 /*
 -----
 UTILITIES
@@ -238,10 +216,6 @@ UTILITIES
 .utility-bg-color-dark {
     background-color: var(--color-dark);
     color: var(--color-light);
-}
-
-.utility-border[data-position="inline-start"] {
-    border-inline-start: var(--type-200) ridge var(--color-dark);
 }
 
 .utility-flow > * + * {
