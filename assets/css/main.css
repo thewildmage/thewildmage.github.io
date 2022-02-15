@@ -93,7 +93,16 @@ h6 {
 }
 
 svg {
-    --color-local: currentColor;
+    --color-local: var(--color-dark);
+    --color-local-inverse: var(--color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    svg {
+        --color-local: var(--color-light);
+        --color-local: yellowgreen;
+        --color-local-inverse: var(--color-dark);
+    }
 }
 
 /*
