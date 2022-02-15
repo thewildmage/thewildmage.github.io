@@ -83,9 +83,20 @@
 
     <body>
         <main class="[ half-and-half ][ utility-full-block ]">
-            <svg class="[ aesthetic-feature ][ utility-place-center ]">
-                <!-- prettier-ignore -->
-                <title>Outline of a dragon hovering in midair, paused for reflection. Drawn in thick, curving strokes, as if with a fountain pen.</title>
+            <!-- TODO: Create better title and use current for desc -->
+            <!-- TODO: Double check accessible labels -->
+            <svg
+                aria-labelledby="dragon-title dragon-desc"
+                class="[ aesthetic-feature ][ utility-place-center ]"
+                focusable="false"
+                role="img"
+            >
+                <title id="dragon-title">Thoughtful dragon.</title>
+                <desc id="dragon-desc">
+                    Outline of a dragon hovering in midair, paused for
+                    reflection. Drawn in thick, curving strokes, as if with a
+                    fountain pen.
+                </desc>
 
                 <use href="/assets/images/dragon/dragon.svg#dragon" />
             </svg>
