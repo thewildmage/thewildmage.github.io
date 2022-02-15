@@ -93,6 +93,7 @@ BLOCKS
 .aesthetic-feature {
     object-fit: contain;
     margin: var(--body-padding);
+    max-inline-size: min(100%, var(--measure-target));
 }
 
 @media (max-width: 90ch) {
