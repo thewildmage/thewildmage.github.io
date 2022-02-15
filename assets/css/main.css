@@ -287,3 +287,14 @@ UTILITIES
 .utility-type-500 {
     font-size: var(--type-500);
 }
+
+/* Courtesy of https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.utility-visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    block-size: 1px;
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
