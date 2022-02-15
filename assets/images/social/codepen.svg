@@ -11,4 +11,6 @@
             clip-rule="evenodd" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"
             stroke-width="2.3px" style="stroke: var(--color-local, var(--color-fallback))" />
     </symbol>
+
+    <use href="#codepen" />
 </svg>
