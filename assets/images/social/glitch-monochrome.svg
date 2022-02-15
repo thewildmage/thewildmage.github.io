@@ -13,7 +13,7 @@
         }
     </style>
 
-    <symbol id="glitch-monochrome">
+    <symbol id="glitch-monochrome" viewBox="0 0 620 620">
         <path
             d="M60.5 200C62.5 186.5 70.3 155.4 85.5 139L284 107.5L472.5 153L477 218L231.5 180.5L284 301.5L484 370.5L490.5 415.5L243 370.5L207.5 489L92.5 458L55.5 395.5L85.5 344L177 319.5L143 278L92.5 242L60.5 200Z"
             style="fill: var(--color-local-inverse, var(--color-fallback-inverse))" />

@@ -113,9 +113,11 @@ BLOCKS
 .aesthetic-feature {
     --color-local: var(--color-primary);
 
+    block-size: 100%;
+    inline-size: 100%;
     object-fit: contain;
-    margin: var(--body-padding);
-    max-inline-size: min(100%, var(--measure-target));
+    padding: var(--body-padding);
+    max-inline-size: var(--measure-target);
 }
 
 /* 2 * --measure-min + buffer for paddings and margins */
