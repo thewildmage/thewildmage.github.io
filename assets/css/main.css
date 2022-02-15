@@ -96,7 +96,8 @@ BLOCKS
     max-inline-size: min(100%, var(--measure-target));
 }
 
-@media (max-width: 90ch) {
+/* 2 * --measure-min + buffer for paddings and margins */
+@media (max-width: 100ch) {
     .aesthetic-feature {
         height: 75vh;
     }
@@ -108,8 +109,8 @@ BLOCKS
     grid-template-columns: 1fr 1fr;
 }
 
-/* 2 * --measure-min */
-@media (max-width: 90ch) {
+/* 2 * --measure-min + buffer for paddings and margins */
+@media (max-width: 100ch) {
     .half-and-half {
         grid-template-columns: 1fr;
     }
@@ -206,7 +207,8 @@ BLOCKS
     z-index: -1;
 }
 
-@media (max-width: 90ch) {
+/* 2 * --measure-min + buffer for paddings and margins */
+@media (max-width: 100ch) {
     .reading-bg::before {
         background: linear-gradient(
             to bottom,
