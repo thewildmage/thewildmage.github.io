@@ -92,6 +92,7 @@ BLOCKS
 */
 .aesthetic-feature {
     object-fit: contain;
+    margin: var(--body-padding);
 }
 
 @media (max-width: 90ch) {
@@ -123,12 +124,13 @@ BLOCKS
     align-items: center;
     display: inline-flex;
     gap: var(--space-100-200);
+    vertical-align: middle;
 }
 
 .lineup {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-500-600);
+    gap: var(--space-600-700);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -186,7 +188,8 @@ BLOCKS
 
     background-color: var(--color-bg-local);
     position: relative;
-    padding: var(--space-400);
+    padding-block: var(--space-500-600);
+    padding-inline: var(--space-400);
 }
 
 .reading-bg::before {
