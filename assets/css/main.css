@@ -81,10 +81,6 @@ h6 {
     font-size: var(--type-400);
 }
 
-main {
-    /* padding: var(--body-padding); */
-}
-
 /*
 -----
 BLOCKS
@@ -236,6 +232,10 @@ UTILITIES
 
 .utility-font-family-display {
     font-family: var(--font-family-display);
+}
+
+.utility-full-block {
+    min-block-size: 100vh;
 }
 
 .utility-place-center {
