@@ -79,9 +79,11 @@
             href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
         />
+
+        <script src="/assets/scripts/theme-control.js" type="module"></script>
     </head>
 
-    <body>
+    <body data-theme="system">
         <main class="[ half-and-half ][ utility-full-block ]">
             <!-- TODO: Create better title and use current for desc -->
             <!-- TODO: Double check accessible labels -->
@@ -315,6 +317,37 @@
                 </aside>
             </div>
         </main>
+
+        <footer>
+            <fieldset id="js-theme-control">
+                <legend>Theme:</legend>
+
+                <input
+                    id="theme-control-light"
+                    name="theme-control"
+                    type="radio"
+                    value="light"
+                />
+                <label for="theme-control-light">Light</label>
+
+                <input
+                    id="theme-control-dark"
+                    name="theme-control"
+                    type="radio"
+                    value="dark"
+                />
+                <label for="theme-control-dark">Dark</label>
+
+                <input
+                    id="theme-control-system"
+                    name="theme-control"
+                    type="radio"
+                    value="system"
+                    checked
+                />
+                <label for="theme-control-system">Match System</label>
+            </fieldset>
+        </footer>
 
         <!--
             needs to be inline because:

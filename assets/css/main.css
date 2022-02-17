@@ -35,17 +35,28 @@
 body {
     --body-padding: var(--space-100-200);
 
+    accent-color: var(--color-primary);
     background-color: var(--color-primary);
     color: var(--color-dark);
     font-family: var(--font-family-body);
     font-size: var(--type-400);
 }
 
+body[data-theme="dark"] {
+    background-color: var(--color-primary-darker);
+    color: var(--color-light);
+}
+
 @media (prefers-color-scheme: dark) {
-    body {
+    body[data-theme="system"] {
         background-color: var(--color-primary-darker);
         color: var(--color-light);
     }
+}
+
+body > footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
 }
 
 a {
@@ -97,8 +108,13 @@ svg {
     --color-local-inverse: var(--color-light);
 }
 
+[data-theme="dark"] svg {
+    --color-local: var(--color-light);
+    --color-local-inverse: var(--color-dark);
+}
+
 @media (prefers-color-scheme: dark) {
-    svg {
+    [data-theme="system"] svg {
         --color-local: var(--color-light);
         --color-local-inverse: var(--color-dark);
     }
@@ -117,8 +133,12 @@ BLOCKS
     max-inline-size: var(--measure-target);
 }
 
+[data-theme="dark"] .aesthetic-feature {
+    --color-local: var(--color-primary);
+}
+
 @media (prefers-color-scheme: dark) {
-    .aesthetic-feature {
+    [data-theme="system"] .aesthetic-feature {
         --color-local: var(--color-primary);
     }
 }
@@ -177,8 +197,13 @@ BLOCKS
         text-decoration: none;
     }
 
+    [data-theme="dark"] .link[data-variant] {
+        --color-gradient-start: var(--color-light);
+        --color-gradient-end: var(--color-primary-lighter);
+    }
+
     @media (prefers-color-scheme: dark) {
-        .link[data-variant] {
+        [data-theme="system"] .link[data-variant] {
             --color-gradient-start: var(--color-light);
             --color-gradient-end: var(--color-primary-lighter);
         }
@@ -233,8 +258,12 @@ BLOCKS
     padding-inline: var(--space-400);
 }
 
+[data-theme="dark"] .reading-bg {
+    --color-bg-local-raw: var(--color-secondary-darker-raw);
+}
+
 @media (prefers-color-scheme: dark) {
-    .reading-bg {
+    [data-theme="system"] .reading-bg {
         --color-bg-local-raw: var(--color-secondary-darker-raw);
     }
 }
