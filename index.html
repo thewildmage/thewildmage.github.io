@@ -364,17 +364,11 @@
                     --color-fallback: #2f221a;
                     --color-fallback-inverse: #cab08d;
 
-                    --color-current: var(--color-fallback);
-
-                    --color-local: var(--is-light-theme, var(--color-fallback))
-                        var(--is-dark-theme, var(--color-fallback-inverse))
-                        var(--is-system-theme, var(--color-current));
-                }
-
-                @media (prefers-color-scheme: dark) {
-                    #magrathea {
-                        --color-current: var(--color-fallback-inverse);
-                    }
+                    --color-local: var(
+                            --if-light-theme-then,
+                            var(--color-fallback)
+                        )
+                        var(--if-dark-theme-then, var(--color-fallback-inverse));
                 }
             </style>
 

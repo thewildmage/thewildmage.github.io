@@ -21,9 +21,12 @@
     --font-family-display: "YoungSerif", serif;
     --font-family-body: "Merriweather", serif;
 
-    --is-light-theme: ;
-    --is-dark-theme: ;
-    --is-system-theme: initial;
+    /* more info on this trick:
+        https://www.w3.org/TR/css-variables-1/#guaranteed-invalid
+        https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/
+    */
+    --if-light-theme-then: initial;
+    --if-dark-theme-then: ;
 
     --measure-target: 60ch;
     --measure-min: 45ch;
@@ -40,31 +43,23 @@ body {
     --body-padding: var(--space-100-200);
 
     accent-color: var(--color-primary);
-    background-color: var(--color-primary);
-    color: var(--color-dark);
+    background-color: var(--if-light-theme-then, var(--color-primary))
+        var(--if-dark-theme-then, var(--color-primary-darker));
+    color: var(--if-light-theme-then, var(--color-dark))
+        var(--if-dark-theme-then, var(--color-light));
     font-family: var(--font-family-body);
     font-size: var(--type-400);
 }
 
-body[data-theme="light"] {
-    --is-light-theme: initial;
-    --is-dark-theme: ;
-    --is-system-theme: ;
-}
-
 body[data-theme="dark"] {
-    --is-light-theme: ;
-    --is-dark-theme: initial;
-    --is-system-theme: ;
-
-    background-color: var(--color-primary-darker);
-    color: var(--color-light);
+    --if-light-theme-then: ;
+    --if-dark-theme-then: initial;
 }
 
 @media (prefers-color-scheme: dark) {
     body[data-theme="system"] {
-        background-color: var(--color-primary-darker);
-        color: var(--color-light);
+        --if-light-theme-then: ;
+        --if-dark-theme-then: initial;
     }
 }
 
@@ -118,20 +113,10 @@ h6 {
 }
 
 svg {
-    --color-local: var(--color-dark);
-    --color-local-inverse: var(--color-light);
-}
-
-[data-theme="dark"] svg {
-    --color-local: var(--color-light);
-    --color-local-inverse: var(--color-dark);
-}
-
-@media (prefers-color-scheme: dark) {
-    [data-theme="system"] svg {
-        --color-local: var(--color-light);
-        --color-local-inverse: var(--color-dark);
-    }
+    --color-local: var(--if-light-theme-then, var(--color-dark))
+        var(--if-dark-theme-then, var(--color-light));
+    --color-local-inverse: var(--if-light-theme-then, var(--color-light))
+        var(--if-dark-theme-then, var(--color-dark));
 }
 
 /*
@@ -198,8 +183,13 @@ BLOCKS
 
 @media (prefers-reduced-motion: no-preference) {
     .link[data-variant] {
-        --color-gradient-start: var(--color-primary-darker);
-        --color-gradient-end: var(--color-dark);
+        --color-gradient-start: var(
+                --if-light-theme-then,
+                var(--color-primary-darker)
+            )
+            var(--if-dark-theme-then, var(--color-light));
+        --color-gradient-end: var(--if-light-theme-then, var(--color-dark))
+            var(--if-dark-theme-then, var(--color-primary-lighter));
 
         background: linear-gradient(
             to bottom right,
@@ -209,18 +199,6 @@ BLOCKS
         background-repeat: repeat-x;
         background-position: bottom;
         text-decoration: none;
-    }
-
-    [data-theme="dark"] .link[data-variant] {
-        --color-gradient-start: var(--color-light);
-        --color-gradient-end: var(--color-primary-lighter);
-    }
-
-    @media (prefers-color-scheme: dark) {
-        [data-theme="system"] .link[data-variant] {
-            --color-gradient-start: var(--color-light);
-            --color-gradient-end: var(--color-primary-lighter);
-        }
     }
 
     .link[data-variant="bewilderum"] {
@@ -261,7 +239,8 @@ BLOCKS
 }
 
 .reading-bg {
-    --color-bg-local-raw: var(--color-secondary-raw);
+    --color-bg-local-raw: var(--if-light-theme-then, var(--color-secondary-raw))
+        var(--if-dark-theme-then, var(--color-secondary-darker-raw));
     --color-bg-local: hsl(var(--color-bg-local-raw));
 
     --gradient-direction: to right;
@@ -270,16 +249,6 @@ BLOCKS
     position: relative;
     padding-block: var(--space-500-600);
     padding-inline: var(--space-400);
-}
-
-[data-theme="dark"] .reading-bg {
-    --color-bg-local-raw: var(--color-secondary-darker-raw);
-}
-
-@media (prefers-color-scheme: dark) {
-    [data-theme="system"] .reading-bg {
-        --color-bg-local-raw: var(--color-secondary-darker-raw);
-    }
 }
 
 .reading-bg::before {
