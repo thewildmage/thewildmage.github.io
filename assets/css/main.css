@@ -21,6 +21,10 @@
     --font-family-display: "YoungSerif", serif;
     --font-family-body: "Merriweather", serif;
 
+    --is-light-theme: ;
+    --is-dark-theme: ;
+    --is-system-theme: initial;
+
     --measure-target: 60ch;
     --measure-min: 45ch;
 
@@ -42,7 +46,17 @@ body {
     font-size: var(--type-400);
 }
 
+body[data-theme="light"] {
+    --is-light-theme: initial;
+    --is-dark-theme: ;
+    --is-system-theme: ;
+}
+
 body[data-theme="dark"] {
+    --is-light-theme: ;
+    --is-dark-theme: initial;
+    --is-system-theme: ;
+
     background-color: var(--color-primary-darker);
     color: var(--color-light);
 }
