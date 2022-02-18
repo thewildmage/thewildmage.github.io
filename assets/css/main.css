@@ -371,10 +371,6 @@ UTILITIES
     font-family: var(--font-family-display);
 }
 
-.utility-full-block {
-    min-block-size: 100vh;
-}
-
 .utility-place-center {
     place-self: center;
 }
