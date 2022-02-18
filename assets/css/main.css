@@ -33,6 +33,28 @@
     --font-family-display: "YoungSerif", serif;
     --font-family-body: "Merriweather", serif;
 
+    --gradient-dir: to bottom right;
+    --gradient-text-dark: linear-gradient(
+        var(--gradient-dir),
+        var(--color-primary-darker),
+        var(--color-secondary-darker)
+    );
+    --gradient-bg-dark: linear-gradient(
+        var(--gradient-dir),
+        var(--color-primary-darker),
+        var(--color-dark)
+    );
+    --gradient-text-light: linear-gradient(
+        var(--gradient-dir),
+        var(--color-primary-lighter),
+        var(--color-secondary)
+    );
+    --gradient-bg-light: linear-gradient(
+        var(--gradient-dir),
+        var(--color-light),
+        var(--color-primary-lighter)
+    );
+
     /* more info on this trick:
         https://www.w3.org/TR/css-variables-1/#guaranteed-invalid
         https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/
@@ -152,7 +174,12 @@ h6 {
 }
 
 h1 {
+    background: var(--if-light-theme-then, var(--gradient-text-dark))
+        var(--if-dark-theme-then, var(--gradient-text-light));
+    -webkit-background-clip: text;
+    background-clip: text;
     font-size: var(--type-900);
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -263,11 +290,8 @@ BLOCKS
         --color-gradient-end: var(--if-light-theme-then, var(--color-dark))
             var(--if-dark-theme-then, var(--color-primary-lighter));
 
-        background: linear-gradient(
-            to bottom right,
-            var(--color-gradient-start),
-            var(--color-gradient-end)
-        );
+        background: var(--if-light-theme-then, var(--gradient-bg-dark))
+            var(--if-dark-theme-then, var(--gradient-bg-light));
         background-repeat: repeat-x;
         background-position: bottom;
         text-decoration: none;
