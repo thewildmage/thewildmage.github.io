@@ -65,12 +65,6 @@ body[data-theme="dark"] {
     }
 }
 
-body > footer {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    font-size: var(--type-300);
-}
-
 a {
     color: inherit;
     text-decoration-thickness: var(--border-thin);
@@ -132,6 +126,13 @@ fieldset {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-300);
+    padding: 0;
+}
+
+body > footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    font-size: var(--type-300);
     padding: var(--space-300);
 }
 
