@@ -139,9 +139,6 @@ fieldset {
 }
 
 body > footer {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    font-size: var(--type-300);
     padding: var(--space-300);
 }
 
@@ -358,6 +355,14 @@ UTILITIES
 -----
 */
 
+.utility-bg-dark {
+    background-color: var(--color-dark);
+}
+
+.utility-color-light {
+    color: var(--color-light);
+}
+
 .utility-flow > * + * {
     margin-block-start: var(--space-400);
 }
@@ -372,6 +377,10 @@ UTILITIES
 
 .utility-place-center {
     place-self: center;
+}
+
+.utility-type-300 {
+    font-size: var(--type-300);
 }
 
 .utility-type-500 {
