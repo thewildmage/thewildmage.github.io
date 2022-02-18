@@ -90,7 +90,8 @@ button {
     padding-inline: var(--space-100);
 }
 
-button[aria-pressed="true"] {
+button[aria-pressed="true"],
+button[disabled] {
     background: linear-gradient(
             to right,
             var(--color-primary-lighter),
@@ -101,24 +102,16 @@ button[aria-pressed="true"] {
     color: var(--color-dark);
 }
 
-button[aria-pressed="true"]:focus,
-button[aria-pressed="true"]:hover {
-    border-color: var(--color-light);
-    /* box-shadow: var(--border-thick) var(--border-thick) 0 var(--color-primary-lighter); */
-}
-
-button[disabled] {
-    border-color: transparent;
-    opacity: var(--opacity-faded);
-}
-
-button:focus,
-button:hover {
-    border-color: currentColor;
-    /* box-shadow: 0 0 var(--space-200) var(--color-secondary); */
-    /* box-shadow: var(--border-thick) var(--border-thick) 0 var(--color-secondary); */
+button[aria-pressed="true"]:not([disabled]):focus,
+button[aria-pressed="false"]:not([disabled]):focus,
+button[aria-pressed="false"]:not([disabled]):hover {
     outline: var(--border-thick) solid var(--color-secondary);
-    outline-offset: var(--border-thin);
+    outline-offset: var(--border-thick);
+}
+
+button[aria-pressed="false"]:not([disabled]):focus,
+button[aria-pressed="false"]:not([disabled]):hover {
+    border-color: currentColor;
 }
 
 fieldset {
