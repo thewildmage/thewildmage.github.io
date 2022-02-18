@@ -8,17 +8,25 @@
 
     --color-dark-raw: 18deg 12% 16%;
     --color-light-raw: 47deg 26% 86%;
+
     --color-primary-raw: var(--color-primary-hs) 49%;
     --color-primary-darker-raw: var(--color-primary-hs) 23%; /* anything higher than 23% fails contrast guidelines */
+    --color-primary-darkest-raw: var(--color-primary-hs) 22%;
     --color-primary-lighter-raw: var(--color-primary-hs) 74%;
+    --color-primary-lightest-raw: var(--color-primary-hs) 85%;
+
     --color-secondary-raw: var(--color-secondary-hs) 56%;
     --color-secondary-darker-raw: var(--color-secondary-hs) 25%;
 
     --color-dark: hsl(var(--color-dark-raw));
     --color-light: hsl(var(--color-light-raw));
+
     --color-primary: hsl(var(--color-primary-raw));
     --color-primary-darker: hsl(var(--color-primary-darker-raw));
+    --color-primary-darkest: hsl(var(--color-primary-darkest-raw));
     --color-primary-lighter: hsl(var(--color-primary-lighter-raw));
+    --color-primary-lightest: hsl(var(--color-primary-lightest-raw));
+
     --color-secondary: hsl(var(--color-secondary-raw));
     --color-secondary-darker: hsl(var(--color-secondary-darker-raw));
 
@@ -74,6 +82,12 @@ a {
 
 a:focus,
 a:hover {
+    color: var(--if-light-theme-then, var(--color-primary-darkest))
+        var(--if-dark-theme-then, var(--color-primary-lightest)); /* HACK: you must change color to get text-decoration-thickness to change due to Safari bug */
+    -webkit-text-decoration-skip: none;
+    text-decoration-skip: none;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
     text-decoration-thickness: var(--border-thick);
 }
 
