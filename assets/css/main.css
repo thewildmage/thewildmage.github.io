@@ -181,6 +181,7 @@ BLOCKS
     object-fit: contain;
     padding: var(--body-padding);
     max-inline-size: var(--measure-target);
+    pointer-events: none;
 }
 
 [data-theme="dark"] .aesthetic-feature {
