@@ -80,7 +80,7 @@
             rel="stylesheet"
         />
 
-        <script src="/assets/scripts/theme-control.js" type="module"></script>
+        <script src="main.js" type="module"></script>
     </head>
 
     <body data-theme="system">
@@ -319,33 +319,34 @@
         </main>
 
         <footer>
+            <!-- TODO: hide if JS isn't available -->
             <fieldset id="js-theme-control">
                 <legend>Theme:</legend>
 
-                <input
-                    id="theme-control-light"
-                    name="theme-control"
-                    type="radio"
+                <button
+                    aria-pressed="false"
+                    name="theme"
+                    type="button"
                     value="light"
-                />
-                <label for="theme-control-light">Light</label>
-
-                <input
-                    id="theme-control-dark"
-                    name="theme-control"
-                    type="radio"
+                >
+                    Light
+                </button>
+                <button
+                    aria-pressed="false"
+                    name="theme"
+                    type="button"
                     value="dark"
-                />
-                <label for="theme-control-dark">Dark</label>
-
-                <input
-                    id="theme-control-system"
-                    name="theme-control"
-                    type="radio"
+                >
+                    Dark
+                </button>
+                <button
+                    aria-pressed="true"
+                    name="theme"
+                    type="button"
                     value="system"
-                    checked
-                />
-                <label for="theme-control-system">Match System</label>
+                >
+                    Unset
+                </button>
             </fieldset>
         </footer>
 
