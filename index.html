@@ -83,7 +83,7 @@
         <script src="main.js" type="module"></script>
     </head>
 
-    <body data-theme="system">
+    <body data-theme="system" data-js-available="false">
         <main class="[ half-and-half ][ utility-full-block ]">
             <!-- TODO: Create better title and use current for desc -->
             <!-- TODO: Double check accessible labels -->
@@ -318,8 +318,7 @@
             </div>
         </main>
 
-        <footer>
-            <!-- TODO: hide if JS isn't available -->
+        <footer class="js-only">
             <fieldset id="js-theme-control">
                 <legend class="utility-visually-hidden">Theme:</legend>
 

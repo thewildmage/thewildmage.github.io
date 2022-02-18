@@ -235,6 +235,10 @@ BLOCKS
     object-fit: contain;
 }
 
+[data-js-available="false"] .js-only {
+    display: none;
+}
+
 .labeled-icon {
     align-items: center;
     display: inline-flex;
