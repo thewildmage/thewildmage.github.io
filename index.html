@@ -321,7 +321,9 @@
         <footer>
             <!-- TODO: hide if JS isn't available -->
             <fieldset id="js-theme-control">
-                <legend>Theme:</legend>
+                <legend class="utility-visually-hidden">Theme:</legend>
+
+                <span aria-hidden="true">Theme:</span>
 
                 <button
                     aria-pressed="false"
@@ -345,7 +347,7 @@
                     type="button"
                     value="system"
                 >
-                    Unset
+                    Match System
                 </button>
             </fieldset>
         </footer>

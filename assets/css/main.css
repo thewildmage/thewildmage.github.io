@@ -36,6 +36,7 @@
     --measure-min: 45ch;
 
     --opacity-faint: 0.2;
+    --opacity-faded: 0.8;
 
     --transition: 0.25s;
 }
@@ -79,6 +80,59 @@ a {
 a:focus,
 a:hover {
     text-decoration-thickness: var(--border-thick);
+}
+
+button {
+    background: linear-gradient(
+            to right,
+            var(--color-primary-darker),
+            var(--color-secondary-darker)
+        )
+        border-box;
+    border: var(--border-thick) solid var(--color-primary);
+    border-radius: var(--border-radius);
+    padding-block: 0;
+    padding-inline: var(--space-100);
+}
+
+button[aria-pressed="true"] {
+    background: linear-gradient(
+            to right,
+            var(--color-primary-lighter),
+            var(--color-secondary)
+        )
+        border-box;
+    border-color: var(--color-primary-lighter);
+    color: var(--color-dark);
+}
+
+button[aria-pressed="true"]:focus,
+button[aria-pressed="true"]:hover {
+    border-color: var(--color-light);
+    /* box-shadow: var(--border-thick) var(--border-thick) 0 var(--color-primary-lighter); */
+}
+
+button[disabled] {
+    border-color: transparent;
+    opacity: var(--opacity-faded);
+}
+
+button:focus,
+button:hover {
+    border-color: currentColor;
+    /* box-shadow: 0 0 var(--space-200) var(--color-secondary); */
+    /* box-shadow: var(--border-thick) var(--border-thick) 0 var(--color-secondary); */
+    outline: var(--border-thick) solid var(--color-secondary);
+    outline-offset: var(--border-thin);
+}
+
+fieldset {
+    align-items: center;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-300);
+    padding: var(--space-300);
 }
 
 h1,
