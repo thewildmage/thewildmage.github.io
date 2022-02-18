@@ -85,6 +85,7 @@ button {
         border-box;
     border: var(--border-thick) solid var(--color-primary);
     border-radius: var(--border-radius);
+    color: currentColor;
     padding-block: 0;
     padding-inline: var(--space-100);
 }
@@ -96,7 +97,7 @@ button[aria-pressed="true"] {
             var(--color-secondary)
         )
         border-box;
-    border-color: var(--color-primary-lighter);
+    border-color: transparent;
     color: var(--color-dark);
 }
 
