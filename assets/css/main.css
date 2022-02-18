@@ -38,7 +38,7 @@
     --opacity-faint: 0.2;
     --opacity-faded: 0.8;
 
-    --transition: 0.25s;
+    --transition-speed: 0.25s;
 }
 
 body {
@@ -68,7 +68,7 @@ body[data-theme="dark"] {
 a {
     color: inherit;
     text-decoration-thickness: var(--border-thin);
-    transition: var(--transition);
+    text-underline-offset: var(--border-thick);
 }
 
 a:focus,
@@ -255,6 +255,9 @@ BLOCKS
         background-repeat: repeat-x;
         background-position: bottom;
         text-decoration: none;
+        transition: var(
+            --transition-speed
+        ); /* BUG: causes the color to flash on page refresh when theme is overridden */
     }
 
     .link[data-variant="bewilderum"] {
