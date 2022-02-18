@@ -224,7 +224,7 @@ BLOCKS
 }
 
 [data-theme="dark"] .aesthetic-feature {
-    --color-local: var(--color-primary);
+    --color-local: var(--color-primary-lighter);
 }
 
 @media (prefers-color-scheme: dark) {
