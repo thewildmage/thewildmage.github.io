@@ -1,4 +1,8 @@
 :root {
+    --border-radius: 3px;
+    --border-thin: 0.1ch;
+    --border-thick: 0.2ch;
+
     --color-primary-hs: 343deg 47%;
     --color-secondary-hs: 198deg 35%;
 
@@ -34,9 +38,6 @@
     --opacity-faint: 0.2;
 
     --transition: 0.25s;
-
-    --underline-thin: 0.1ch;
-    --underline-thick: 0.2ch;
 }
 
 body {
@@ -70,13 +71,13 @@ body > footer {
 
 a {
     color: inherit;
-    text-decoration-thickness: var(--underline-thin);
+    text-decoration-thickness: var(--border-thin);
     transition: var(--transition);
 }
 
 a:focus,
 a:hover {
-    text-decoration-thickness: var(--underline-thick);
+    text-decoration-thickness: var(--border-thick);
 }
 
 h1,
@@ -203,7 +204,7 @@ BLOCKS
 
     .link[data-variant="bewilderum"] {
         background-size: 100% 100%;
-        border-radius: 3px;
+        border-radius: var(--border-radius);
         color: var(--color-bg-local, var(--color-secondary));
         padding-block: 0.1ch;
         padding-inline: 0.25ch;
@@ -211,7 +212,7 @@ BLOCKS
 
     .link[data-variant="bewilderum"]:focus,
     .link[data-variant="bewilderum"]:hover {
-        background-size: 100% var(--underline-thick);
+        background-size: 100% var(--border-thick);
         border-radius: 0;
         color: inherit;
     }
@@ -219,13 +220,13 @@ BLOCKS
     .link[data-variant="darkflight"] {
         background-size: 100% 0;
         display: inline-block;
-        padding-block: calc(2 * var(--underline-thick));
+        padding-block: calc(2 * var(--border-thick));
     }
 
     .link[data-variant="darkflight"]:focus,
     .link[data-variant="darkflight"]:hover {
-        background-size: 100% var(--underline-thick);
-        transform: translateY(calc(-2 * var(--underline-thick)));
+        background-size: 100% var(--border-thick);
+        transform: translateY(calc(-2 * var(--border-thick)));
     }
 }
 
