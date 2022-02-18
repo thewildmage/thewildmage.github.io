@@ -51,6 +51,7 @@ body {
         var(--if-dark-theme-then, var(--color-light));
     font-family: var(--font-family-body);
     font-size: var(--type-400);
+    min-block-size: 100vh;
 }
 
 body[data-theme="dark"] {
