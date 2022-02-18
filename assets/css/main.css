@@ -227,6 +227,10 @@ BLOCKS
     vertical-align: middle;
 }
 
+.labeled-icon > * {
+    flex-shrink: 0;
+}
+
 .lineup {
     display: flex;
     flex-wrap: wrap;
