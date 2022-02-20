@@ -85,9 +85,9 @@
 
     <body data-theme="system" data-js-available="false">
         <main class="half-and-half">
-            <!-- TODO: Double check accessible labels -->
             <svg
-                aria-labelledby="dragon-title dragon-desc"
+                aria-describedby="dragon-desc"
+                aria-labelledby="dragon-title"
                 class="[ aesthetic-feature ][ utility-place-center ]"
                 focusable="false"
                 role="img"
@@ -239,6 +239,7 @@
                     <ul class="lineup" role="list">
                         <li>
                             <a
+                                aria-labelledby="magrathea-title"
                                 class="link"
                                 data-variant="darkflight"
                                 href="https://magrathea.guide"
@@ -320,6 +321,8 @@
         <footer
             class="[ utility-bg-dark utility-color-light utility-type-300 ][ js-only ]"
         >
+            <h2 class="utility-visually-hidden">Controls</h2>
+
             <fieldset id="js-theme-control">
                 <legend class="utility-visually-hidden" id="theme-group-label">
                     Theme
