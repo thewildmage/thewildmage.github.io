@@ -270,7 +270,7 @@ BLOCKS
 .lineup {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-600-700);
+    gap: var(--space-400-500) var(--space-600-700);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -381,7 +381,12 @@ UTILITIES
 }
 
 .utility-flow > * + * {
-    margin-block-start: var(--space-400);
+    /*
+        headings should have more space above than there is between paragraphs.
+        space vars are fixed, em reacts to current context.
+        both keeps things from getting too small
+    */
+    margin-block-start: max(0.75em, var(--space-400));
 }
 
 .utility-font-family-display {
