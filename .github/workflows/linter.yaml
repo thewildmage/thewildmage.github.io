@@ -10,25 +10,7 @@ on:
         branches:
             - main
             - dev
-    workflow_call:
 
 jobs:
     lint:
-        name: Run Super-Linter
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Checkout Code
-              uses: actions/checkout@v2
-              with:
-                  # Full git history is needed to get a proper list of changed files within `super-linter`
-                  fetch-depth: 0
-
-            - name: Lint Codebase
-              uses: github/super-linter@v4
-              env:
-                  DEFAULT_BRANCH: main
-                  GITHUB_TOKEN: ${{ github.token }}
-                  JAVASCRIPT_DEFAULT_STYLE: prettier
-                  MARKDOWN_CONFIG_FILE: .markdownlint.yaml
-                  VALIDATE_ALL_CODEBASE: false
+        uses: thewildmage/dotfiles/.github/workflows/linter.yaml@v1.2.1
