@@ -321,12 +321,16 @@
             class="[ utility-bg-dark utility-color-light utility-type-300 ][ js-only ]"
         >
             <fieldset id="js-theme-control">
-                <legend class="utility-visually-hidden">Theme:</legend>
+                <legend class="utility-visually-hidden" id="theme-group-label">
+                    Theme
+                </legend>
 
                 <span aria-hidden="true">Theme:</span>
 
                 <button
+                    aria-labelledby="theme-light theme-group-label"
                     aria-pressed="false"
+                    id="theme-light"
                     name="theme"
                     type="button"
                     value="light"
@@ -334,7 +338,9 @@
                     Light
                 </button>
                 <button
+                    aria-labelledby="theme-dark theme-group-label"
                     aria-pressed="false"
+                    id="theme-dark"
                     name="theme"
                     type="button"
                     value="dark"
@@ -342,7 +348,9 @@
                     Dark
                 </button>
                 <button
+                    aria-labelledby="theme-system theme-group-label"
                     aria-pressed="true"
+                    id="theme-system"
                     name="theme"
                     type="button"
                     value="system"
