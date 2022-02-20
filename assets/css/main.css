@@ -215,10 +215,11 @@ BLOCKS
 .aesthetic-feature {
     --color-local: var(--if-light-theme-then, var(--color-primary-darker))
         var(--if-dark-theme-then, var(--color-primary-lighter));
+    --margin-local: var(--space-100-200);
 
     object-fit: contain;
-    margin-inline: var(--space-100-200);
-    margin-block-end: var(--space-100-200);
+    margin-inline: var(--margin-local);
+    margin-block-end: var(--margin-local);
     margin-block-start: var(--space-900);
     pointer-events: none;
 }
@@ -226,7 +227,8 @@ BLOCKS
 /* 2 * --measure-min + buffer for paddings and margins */
 @media (max-width: 100ch) {
     .aesthetic-feature {
-        height: 75vh;
+        block-size: 75vh;
+        margin-block-start: var(--margin-local);
     }
 }
 
