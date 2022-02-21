@@ -60,7 +60,7 @@
         https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/
     */
     --if-light-theme-then: initial;
-    /* stylelint-disable-next-line declaration-block-semicolon-space-before declaration-colon-space-after */
+    /* stylelint-disable-next-line declaration-block-semicolon-space-before, declaration-colon-space-after */
     --if-dark-theme-then: ;
 
     --measure-target: 60ch;
@@ -84,14 +84,14 @@ body {
 }
 
 body[data-theme="dark"] {
-    /* stylelint-disable-next-line declaration-block-semicolon-space-before declaration-colon-space-after */
+    /* stylelint-disable-next-line declaration-block-semicolon-space-before, declaration-colon-space-after */
     --if-light-theme-then: ;
     --if-dark-theme-then: initial;
 }
 
 @media (prefers-color-scheme: dark) {
     body[data-theme="system"] {
-        /* stylelint-disable-next-line declaration-block-semicolon-space-before declaration-colon-space-after */
+        /* stylelint-disable-next-line declaration-block-semicolon-space-before, declaration-colon-space-after */
         --if-light-theme-then: ;
         --if-dark-theme-then: initial;
     }
