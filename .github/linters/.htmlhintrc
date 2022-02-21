@@ -14,7 +14,7 @@
     "id-class-value": false,
     "id-unique": true,
     "inline-script-disabled": true,
-    "inline-style-disabled": true,
+    "inline-style-disabled": false,
     "input-requires-label": true,
     "space-tab-mixed-disabled": "space4",
     "spec-char-escape": false,
