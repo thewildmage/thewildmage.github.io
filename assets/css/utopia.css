@@ -2,7 +2,7 @@
 -----
 UTOPIA
 -----
-Inspired by https://utopia.fyi/
+Inspired and informed by https://utopia.fyi/
 */
 
 :root {
@@ -63,6 +63,7 @@ Inspired by https://utopia.fyi/
     --type-900-max: var(--type-800-max) * var(--utopia-max-scale);
 
     /* solve for type size */
+
     /* 200 */
     --utopia-type-200-slope: (
         (var(--type-200-max) - var(--type-200-min)) / var(--utopia-run)
@@ -184,7 +185,9 @@ Inspired by https://utopia.fyi/
     );
 
     /* ----- SPACE */
+
     /* @link https://utopia.fyi/space/calculator?c=320,17,1.2,1500,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
     /* scale */
     --space-100-multiplier: 0.25;
     --space-200-multiplier: 0.5;
@@ -196,34 +199,44 @@ Inspired by https://utopia.fyi/
     --space-800-multiplier: 4;
     --space-900-multiplier: 6;
 
+    /* 100 */
     --space-100-min: var(--type-400-min) * var(--space-100-multiplier);
     --space-100-max: var(--type-400-max) * var(--space-100-multiplier);
 
+    /* 200 */
     --space-200-min: var(--type-400-min) * var(--space-200-multiplier);
     --space-200-max: var(--type-400-max) * var(--space-200-multiplier);
 
+    /* 300 */
     --space-300-min: var(--type-400-min) * var(--space-300-multiplier);
     --space-300-max: var(--type-400-max) * var(--space-300-multiplier);
 
+    /* 400 */
     --space-400-min: var(--type-400-min) * var(--space-400-multiplier);
     --space-400-max: var(--type-400-max) * var(--space-400-multiplier);
 
+    /* 500 */
     --space-500-min: var(--type-400-min) * var(--space-500-multiplier);
     --space-500-max: var(--type-400-max) * var(--space-500-multiplier);
 
+    /* 600 */
     --space-600-min: var(--type-400-min) * var(--space-600-multiplier);
     --space-600-max: var(--type-400-max) * var(--space-600-multiplier);
 
+    /* 700 */
     --space-700-min: var(--type-400-min) * var(--space-700-multiplier);
     --space-700-max: var(--type-400-max) * var(--space-700-multiplier);
 
+    /* 800 */
     --space-800-min: var(--type-400-min) * var(--space-800-multiplier);
     --space-800-max: var(--type-400-max) * var(--space-800-multiplier);
 
+    /* 900 */
     --space-900-min: var(--type-400-min) * var(--space-900-multiplier);
     --space-900-max: var(--type-400-max) * var(--space-900-multiplier);
 
     /* solve for space size */
+
     /* 100 */
     --utopia-space-100-slope: (
         (var(--space-100-max) - var(--space-100-min)) / var(--utopia-run)
@@ -360,6 +373,7 @@ Inspired by https://utopia.fyi/
     );
 
     /* One-up pairs */
+
     /* 100-200 */
     --utopia-space-100-200-slope: (
         (var(--space-200-max) - var(--space-100-min)) / var(--utopia-run)
