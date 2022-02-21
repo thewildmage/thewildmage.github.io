@@ -1,239 +1,422 @@
-/*
-==========
-DAINE'S CODING SITE
-v1.0.0 - Flamewing
------
-Code written by Daine (https://thewildmage.dev)
-==========
-*/
-
 :root {
-    --color-bg: hsl(190, 20%, 94%);
-    --color-fg-primary: hsl(190, 40%, 12%);
-    --color-fg-secondary: hsl(190, 24%, 20%);
-    --color-gradient-start: hsl(189, 42%, 22%);
-    --color-gradient-end: hsl(190, 37%, 49%);
+    --border-radius: 3px;
+    --border-thin: 0.1ch;
+    --border-thick: 0.2ch;
+
+    --color-primary-hs: 343deg 47%;
+    --color-secondary-hs: 198deg 35%;
+
+    --color-dark-raw: 18deg 12% 16%;
+    --color-light-raw: 47deg 26% 86%;
+
+    --color-primary-raw: var(--color-primary-hs) 49%;
+    --color-primary-darker-raw: var(--color-primary-hs) 23%; /* anything higher than 23% fails contrast guidelines */
+    --color-primary-darkest-raw: var(--color-primary-hs) 22%;
+    --color-primary-lighter-raw: var(--color-primary-hs) 74%;
+    --color-primary-lightest-raw: var(--color-primary-hs) 85%;
+
+    --color-secondary-raw: var(--color-secondary-hs) 56%;
+    --color-secondary-darker-raw: var(--color-secondary-hs) 25%;
+
+    --color-dark: hsl(var(--color-dark-raw));
+    --color-light: hsl(var(--color-light-raw));
+
+    --color-primary: hsl(var(--color-primary-raw));
+    --color-primary-darker: hsl(var(--color-primary-darker-raw));
+    --color-primary-darkest: hsl(var(--color-primary-darkest-raw));
+    --color-primary-lighter: hsl(var(--color-primary-lighter-raw));
+    --color-primary-lightest: hsl(var(--color-primary-lightest-raw));
+
+    --color-secondary: hsl(var(--color-secondary-raw));
+    --color-secondary-darker: hsl(var(--color-secondary-darker-raw));
 
     --font-family-display: "YoungSerif", serif;
     --font-family-body: "Merriweather", serif;
 
-    --gradient: linear-gradient(25deg, var(--color-gradient-start), var(--color-gradient-end));
-    --gradient-reverse: linear-gradient(25deg, var(--color-gradient-end), var(--color-gradient-start));
+    --gradient-dir: to bottom right;
+    --gradient-text-dark: linear-gradient(
+        var(--gradient-dir),
+        var(--color-primary-darker),
+        var(--color-secondary-darker)
+    );
+    --gradient-bg-dark: linear-gradient(
+        var(--gradient-dir),
+        var(--color-primary-darker),
+        var(--color-dark)
+    );
+    --gradient-text-light: linear-gradient(
+        var(--gradient-dir),
+        var(--color-primary-lighter),
+        var(--color-secondary)
+    );
+    --gradient-bg-light: linear-gradient(
+        var(--gradient-dir),
+        var(--color-light),
+        var(--color-primary-lighter)
+    );
 
-    --width-reading: 60ch;
-    --min-width-reading: 45ch;
+    /* more info on this trick:
+        https://www.w3.org/TR/css-variables-1/#guaranteed-invalid
+        https://lea.verou.me/2020/10/the-var-space-hack-to-toggle-multiple-values-with-one-custom-property/
+    */
+    --if-light-theme-then: initial;
+    /* stylelint-disable-next-line declaration-block-semicolon-space-before, declaration-colon-space-after */
+    --if-dark-theme-then: ;
+
+    --measure-target: 60ch;
+    --measure-min: 45ch;
+
+    --opacity-faint: 0.2;
+    --opacity-faded: 0.8;
+
+    --transition-speed: 0.25s;
 }
-
-*
-, *::before
-, *::after {
-    box-sizing: border-box;
-}
-
-/*
------
-RESET
------
-*/
-
-h1
-, h2
-, h3
-, h4
-, h5
-, h6 {
-    margin: 0;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-p { margin: 0; }
-* + p { margin-top: 1em; }
 
 body {
-    background: var(--color-bg);
-    color: var(--color-fg-primary);
+    accent-color: var(--color-primary);
+    background-color: var(--if-light-theme-then, var(--color-primary))
+        var(--if-dark-theme-then, var(--color-primary-darker));
+    color: var(--if-light-theme-then, var(--color-dark))
+        var(--if-dark-theme-then, var(--color-light));
     font-family: var(--font-family-body);
-    font-size: var(--step-0);
-    hyphens: auto;
-    line-height: 1.5;
-    margin: 0;
-    min-height: 100vh;
-    text-align: justify;
+    font-size: var(--type-400);
+    min-block-size: 100vh;
 }
 
-/*
------
-ELEMENTS
------
-*/
+body[data-theme="dark"] {
+    /* stylelint-disable-next-line declaration-block-semicolon-space-before, declaration-colon-space-after */
+    --if-light-theme-then: ;
+    --if-dark-theme-then: initial;
+}
+
+@media (prefers-color-scheme: dark) {
+    body[data-theme="system"] {
+        /* stylelint-disable-next-line declaration-block-semicolon-space-before, declaration-colon-space-after */
+        --if-light-theme-then: ;
+        --if-dark-theme-then: initial;
+    }
+}
 
 a {
-    background: var(--gradient);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 100% 0;
-    color: var(--color-gradient-start);
-    display: inline-block;
-    text-decoration: none;
-    transition: 0.25s;
+    color: inherit;
+    text-decoration-thickness: var(--border-thin);
+    text-underline-offset: var(--border-thick);
 }
 
-a:focus
-, a:hover {
-    background-size: 100% 3px;
-    transform: translateY(-5px);
+a:focus,
+a:hover {
+    /* HACK: you must change color to get text-decoration-thickness to change due to Safari bug */
+    color: var(--if-light-theme-then, var(--color-primary-darkest))
+        var(--if-dark-theme-then, var(--color-primary-lightest));
+    -webkit-text-decoration-skip: none;
+    text-decoration-skip: none;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: var(--border-thick);
 }
 
-article {
-    max-width: min(var(--width-reading), 100%);
-    min-width: min(var(--min-width-reading), 100%);
+button {
+    background: linear-gradient(
+            to right,
+            var(--color-primary-darker),
+            var(--color-secondary-darker)
+        )
+        border-box;
+    border: var(--border-thick) solid var(--color-primary);
+    border-radius: var(--border-radius);
+    color: currentColor;
+    padding-block: 0;
+    padding-inline: var(--space-100);
 }
 
-article > * + * {
-    margin-top: 1em;
+button[aria-pressed="true"],
+button[disabled] {
+    background: linear-gradient(
+            to right,
+            var(--color-primary-lighter),
+            var(--color-secondary)
+        )
+        border-box;
+    border-color: transparent;
+    color: var(--color-dark);
 }
 
-article > p:first-of-type { font-size: var(--step-1); }
-article > p:not(:first-of-type) { color: var(--color-fg-secondary); }
-
-h1
-, h2
-, h3
-, h4
-, h5
-, h6 {
-    background: var(--gradient-reverse);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-family: var(--font-family-display);
-    font-weight: bold;
-    letter-spacing: 0.05em;
+button[aria-pressed="true"]:not([disabled]):focus,
+button[aria-pressed="false"]:not([disabled]):focus,
+button[aria-pressed="false"]:not([disabled]):hover {
+    outline: var(--border-thick) solid var(--color-secondary);
+    outline-offset: var(--border-thick);
 }
 
-h1 { font-size: var(--step-4); line-height: 1.125; }
-h2 { font-size: var(--step-2); line-height: 1.25; }
-h3 { font-size: var(--step-1); }
-h4 { font-size: var(--step-0); }
-h5 { font-size: var(--step-0); }
-h6 { font-size: var(--step-0); }
-
-hr {
-    background: var(--gradient);
-    border: none;
-    height: 3px;
-    margin: var(--step-2);
+button[aria-pressed="false"]:not([disabled]):focus,
+button[aria-pressed="false"]:not([disabled]):hover {
+    border-color: currentColor;
 }
 
-/*
------
-LAYOUTS
------
-*/
-
-/* ----- DAWNSTRIKER */
-.layout-center.dawnstriker {
+fieldset {
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* ----- STORMBACK */
-.layout-sidebar.stormback {
+    border: none;
     display: flex;
     flex-wrap: wrap;
+    gap: var(--space-300);
+    padding: 0;
 }
 
-.layout-sidebar.stormback > * {
-    flex: 1 1 40%;
-    padding: var(--step-0);
+body > footer {
+    padding: var(--space-300);
 }
 
-.layout-sidebar.stormback .__main {
-    min-width: min(30ch, 100%);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-display);
 }
 
-.layout-sidebar.stormback .__sidebar {
-    min-height: 60vh;
-    min-width: min(350px, 100%);
+h1 {
+    background: var(--if-light-theme-then, var(--gradient-text-dark))
+        var(--if-dark-theme-then, var(--gradient-text-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: var(--type-900);
+    -webkit-text-fill-color: transparent;
 }
 
-/* ----- RUMBLEBELLY */
-.layout-social.rumblebelly {
-    align-items: center;
-    display: grid;
-    font-size: var(--step--1);
-    grid-gap: var(--step-1);
-    grid-auto-columns: minmax(0, 1fr);
-    grid-template-areas:
-        "discord    camp    magrathea"
-        "coffee     coffee  coffee"
-    ;
-    justify-content: space-evenly;
-    justify-items: center;
-    text-align: center;
+h2 {
+    font-size: var(--type-800);
 }
 
-.layout-social.rumblebelly .__coffee { grid-area: coffee; }
-.layout-social.rumblebelly .__coffee a.kofi-button:hover {
-    opacity: initial;
+h3 {
+    font-size: var(--type-700);
 }
 
-.layout-social.rumblebelly .__discord { grid-area: discord; }
-.layout-social.rumblebelly .__discord img { height: 3em; }
-
-.layout-social.rumblebelly .__email { grid-area: email; }
-
-.layout-social.rumblebelly .__coding-camp { grid-area: camp; }
-
-.layout-social.rumblebelly .__coding-camp img {
-    height: 48px;
-    width: auto;
+h4 {
+    font-size: var(--type-600);
 }
 
-.layout-social.rumblebelly .__magrathea { grid-area: magrathea; }
+h5 {
+    font-size: var(--type-500);
+}
 
-.layout-social.rumblebelly .__magrathea img { height: 4em; }
+h6 {
+    font-size: var(--type-400);
+}
+
+svg {
+    --color-local: var(--if-light-theme-then, var(--color-dark))
+        var(--if-dark-theme-then, var(--color-light));
+    --color-local-inverse: var(--if-light-theme-then, var(--color-light))
+        var(--if-dark-theme-then, var(--color-dark));
+}
 
 /*
 -----
-LEGOS
+BLOCKS
+-----
+*/
+.aesthetic-feature {
+    --color-local: var(--if-light-theme-then, var(--color-primary-darker))
+        var(--if-dark-theme-then, var(--color-primary-lighter));
+    --margin-local: var(--space-100-200);
+
+    margin-block-end: var(--margin-local);
+    margin-block-start: var(--space-900);
+    margin-inline: var(--margin-local);
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* 2 * --measure-min + buffer for paddings and margins */
+@media (max-width: 100ch) {
+    .aesthetic-feature {
+        block-size: 75vh;
+        margin-block-start: var(--margin-local);
+    }
+}
+
+.half-and-half {
+    display: grid;
+    gap: var(--space-400-500);
+    grid-template-columns: 1fr 1fr;
+}
+
+/* 2 * --measure-min + buffer for paddings and margins */
+@media (max-width: 100ch) {
+    .half-and-half {
+        grid-template-columns: 1fr;
+    }
+}
+
+.icon {
+    aspect-ratio: 1 / 1;
+    block-size: var(--type-500);
+    object-fit: contain;
+}
+
+[data-js-available="false"] .js-only {
+    display: none;
+}
+
+.labeled-icon {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-100-200);
+    vertical-align: middle;
+}
+
+.labeled-icon > * {
+    flex-shrink: 0;
+}
+
+.lineup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-400-500) var(--space-600-700);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .link[data-variant] {
+        --color-gradient-start: var(
+                --if-light-theme-then,
+                var(--color-primary-darker)
+            )
+            var(--if-dark-theme-then, var(--color-light));
+        --color-gradient-end: var(--if-light-theme-then, var(--color-dark))
+            var(--if-dark-theme-then, var(--color-primary-lighter));
+
+        background: var(--if-light-theme-then, var(--gradient-bg-dark))
+            var(--if-dark-theme-then, var(--gradient-bg-light));
+        background-position: bottom;
+        background-repeat: repeat-x;
+        text-decoration: none;
+        transition: var(
+            --transition-speed
+        ); /* BUG: causes the color to flash on page refresh when theme is overridden */
+    }
+
+    .link[data-variant="bewilderum"] {
+        background-size: 100% 100%;
+        border-radius: var(--border-radius);
+        color: var(--color-bg-local, var(--color-secondary));
+        padding-block: 0.1ch;
+        padding-inline: 0.25ch;
+    }
+
+    .link[data-variant="bewilderum"]:focus,
+    .link[data-variant="bewilderum"]:hover {
+        background-size: 100% var(--border-thick);
+        border-radius: 0;
+        color: inherit;
+    }
+
+    .link[data-variant="darkflight"] {
+        background-size: 100% 0;
+        display: inline-block;
+        padding-block: calc(2 * var(--border-thick));
+    }
+
+    .link[data-variant="darkflight"]:focus,
+    .link[data-variant="darkflight"]:hover {
+        background-size: 100% var(--border-thick);
+        transform: translateY(calc(-2 * var(--border-thick)));
+    }
+}
+
+.project-logo {
+    block-size: var(--type-900);
+    object-fit: contain;
+}
+
+.reading {
+    max-inline-size: var(--measure-target);
+}
+
+.reading-bg {
+    --color-bg-local-raw: var(--if-light-theme-then, var(--color-secondary-raw))
+        var(--if-dark-theme-then, var(--color-secondary-darker-raw));
+    --color-bg-local: hsl(var(--color-bg-local-raw));
+    --gradient-direction: to right;
+
+    background-color: var(--color-bg-local);
+    padding-block: var(--space-500-600);
+    padding-inline: var(--space-400);
+    position: relative;
+}
+
+.reading-bg::before {
+    background: linear-gradient(
+        var(--gradient-direction),
+        hsl(var(--color-bg-local-raw) / 0),
+        var(--color-bg-local)
+    ); /* can't use transparent here because of Safari */
+
+    content: "";
+    inset-block: 0;
+    inset-inline: -50% 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+/* 2 * --measure-min + buffer for paddings and margins */
+@media (max-width: 100ch) {
+    .reading-bg::before {
+        --gradient-direction: to bottom;
+
+        inset-block: -50vh 100%;
+        inset-inline: 0;
+    }
+}
+
+/*
+-----
+UTILITIES
 -----
 */
 
-/* ----- BEWIDLERUM */
-a.lego-link.bewilderum {
-    background: var(--gradient);
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 100% 100%;
-    border-radius: 3px;
-    color: var(--color-bg);
-    padding: 0 0.25em;
-    position: relative;
-    text-decoration: none;
-    transition: 0.25s;
+.utility-bg-dark {
+    background-color: var(--color-dark);
 }
 
-a.lego-link.bewilderum:focus
-, a.lego-link.bewilderum:hover {
-    background-size: 100% 3px;
-    border-radius: 0;
-    color: var(--color-fg-primary);
-    transform: none;
+.utility-color-light {
+    color: var(--color-light);
 }
 
-/* ----- FLUTTERFLIGHT */
+.utility-flow > * + * {
+    /*
+        headings should have more space above than there is between paragraphs.
+        space vars are fixed, em reacts to current context.
+        both keeps things from getting too small
+    */
+    margin-block-start: max(0.75em, var(--space-400));
+}
 
-.lego-aesthetic.flutterflight {
-    height: 100%;
-    /* min-height: 60vh; */
-    /* object-fit: contain; */
-    /* object-position: center; */
-    /* width: auto; */
+.utility-font-family-display {
+    font-family: var(--font-family-display);
+}
+
+.utility-justify-center {
+    justify-self: center;
+}
+
+.utility-type-300 {
+    font-size: var(--type-300);
+}
+
+.utility-type-500 {
+    font-size: var(--type-500);
+}
+
+/* Courtesy of https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+.utility-visually-hidden:not(:focus):not(:active) {
+    block-size: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    inline-size: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
 }
