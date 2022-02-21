@@ -7,7 +7,9 @@ Inspired by https://utopia.fyi/
 
 :root {
     /* ----- TYPE */
+
     /* @link https://utopia.fyi/type/calculator?c=320,17,1.2,1500,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
     /*
     width and (type) size should both be in px.
     if changing this, modify formulas and keep units same between the two.

@@ -1,14 +1,11 @@
 {
-    "extends": [
-        "stylelint-config-standard",
-        "stylelint-config-prettier"
-    ],
+    "extends": "stylelint-config-standard",
     "plugins": [
         "stylelint-order"
     ],
     "rules": {
         "declaration-colon-newline-after": null,
-        "indentation": 4,
+        "indentation": null,
         "no-descending-specificity": null,
         "order/order": [
             "custom-properties",
