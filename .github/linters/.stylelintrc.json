@@ -4,7 +4,34 @@
         "stylelint-order"
     ],
     "rules": {
+        "alpha-value-notation": "number",
+        "custom-property-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "first-nested"
+                ],
+                "ignore": [
+                    "after-comment",
+                    "after-custom-property",
+                    "inside-single-line-block"
+                ]
+            }
+        ],
         "declaration-colon-newline-after": null,
+        "declaration-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "after-comment",
+                    "after-declaration",
+                    "first-nested"
+                ],
+                "ignore": [
+                    "inside-single-line-block"
+                ]
+            }
+        ],
         "indentation": null,
         "no-descending-specificity": null,
         "order/order": [
@@ -12,6 +39,13 @@
             "declarations"
         ],
         "order/properties-alphabetical-order": true,
+        "property-no-vendor-prefix": null,
+        "value-keyword-case": [
+            "lower",
+            {
+                "camelCaseSvgKeywords": true
+            }
+        ],
         "value-list-comma-newline-after": null
     }
 }

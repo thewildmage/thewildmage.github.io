@@ -83,12 +83,14 @@ body {
 }
 
 body[data-theme="dark"] {
+    /* stylelint-disable-next-line declaration-block-semicolon-space-before declaration-colon-space-after */
     --if-light-theme-then: ;
     --if-dark-theme-then: initial;
 }
 
 @media (prefers-color-scheme: dark) {
     body[data-theme="system"] {
+        /* stylelint-disable-next-line declaration-block-semicolon-space-before declaration-colon-space-after */
         --if-light-theme-then: ;
         --if-dark-theme-then: initial;
     }
@@ -102,8 +104,9 @@ a {
 
 a:focus,
 a:hover {
+    /* HACK: you must change color to get text-decoration-thickness to change due to Safari bug */
     color: var(--if-light-theme-then, var(--color-primary-darkest))
-        var(--if-dark-theme-then, var(--color-primary-lightest)); /* HACK: you must change color to get text-decoration-thickness to change due to Safari bug */
+        var(--if-dark-theme-then, var(--color-primary-lightest));
     -webkit-text-decoration-skip: none;
     text-decoration-skip: none;
     -webkit-text-decoration-skip-ink: none;
@@ -217,10 +220,10 @@ BLOCKS
         var(--if-dark-theme-then, var(--color-primary-lighter));
     --margin-local: var(--space-100-200);
 
-    object-fit: contain;
-    margin-inline: var(--margin-local);
     margin-block-end: var(--margin-local);
     margin-block-start: var(--space-900);
+    margin-inline: var(--margin-local);
+    object-fit: contain;
     pointer-events: none;
 }
 
@@ -284,8 +287,8 @@ BLOCKS
 
         background: var(--if-light-theme-then, var(--gradient-bg-dark))
             var(--if-dark-theme-then, var(--gradient-bg-light));
-        background-repeat: repeat-x;
         background-position: bottom;
+        background-repeat: repeat-x;
         text-decoration: none;
         transition: var(
             --transition-speed
@@ -333,13 +336,12 @@ BLOCKS
     --color-bg-local-raw: var(--if-light-theme-then, var(--color-secondary-raw))
         var(--if-dark-theme-then, var(--color-secondary-darker-raw));
     --color-bg-local: hsl(var(--color-bg-local-raw));
-
     --gradient-direction: to right;
 
     background-color: var(--color-bg-local);
-    position: relative;
     padding-block: var(--space-500-600);
     padding-inline: var(--space-400);
+    position: relative;
 }
 
 .reading-bg::before {
@@ -348,6 +350,7 @@ BLOCKS
         hsl(var(--color-bg-local-raw) / 0),
         var(--color-bg-local)
     ); /* can't use transparent here because of Safari */
+
     content: "";
     inset-block: 0;
     inset-inline: -50% 100%;
@@ -406,9 +409,9 @@ UTILITIES
 
 /* Courtesy of https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
 .utility-visually-hidden:not(:focus):not(:active) {
+    block-size: 1px;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
-    block-size: 1px;
     inline-size: 1px;
     margin: -1px;
     overflow: hidden;
