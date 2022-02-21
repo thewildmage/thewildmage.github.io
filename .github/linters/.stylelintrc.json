@@ -5,19 +5,7 @@
     ],
     "rules": {
         "alpha-value-notation": "number",
-        "custom-property-empty-line-before": [
-            "always",
-            {
-                "except": [
-                    "first-nested"
-                ],
-                "ignore": [
-                    "after-comment",
-                    "after-custom-property",
-                    "inside-single-line-block"
-                ]
-            }
-        ],
+        "custom-property-empty-line-before": null,
         "declaration-colon-newline-after": null,
         "declaration-empty-line-before": [
             "always",
