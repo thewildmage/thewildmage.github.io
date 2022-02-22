@@ -221,6 +221,7 @@ BLOCKS
         var(--if-dark-theme-then, var(--color-primary-lighter));
     --margin-local: var(--space-100-200);
 
+    inline-size: calc(100% - 2 * var(--margin-local)); /* required for Safari */
     margin-block-end: var(--margin-local);
     margin-block-start: var(--space-900);
     margin-inline: var(--margin-local);
