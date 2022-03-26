@@ -14,12 +14,6 @@ The following social icons are used in accordance with their company's press or 
 
 All rights reserved.
 
-## Coding Camp
-
-The Coding Camp icon comes from the [Coding Camp Discord Server](https://discord.gg/udQ5WsqpME), where I, Cecilia, am an administrator.
-
-All rights reserved.
-
 ## Dragon Icon
 
 The [dragon icon](https://thenounproject.com/icon/2266440/) was created by [Saeful Muslim](https://thenounproject.com/rebelsaeful) of [The Noun Project](https://thenounproject.com) and is licensed under [Creative Commons CCBY](https://creativecommons.org/licenses/by/3.0/).
