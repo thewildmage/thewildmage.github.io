@@ -1,370 +1,416 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 
-        <title>thewildmage — Open Source Software Engineer</title>
-        <meta
-            name="title"
-            content="thewildmage — Open Source Software Engineer"
-        />
-        <meta
-            property="og:title"
-            content="thewildmage — Open Source Software Engineer"
-        />
+		<title>thewildmage — Open Source Software Engineer</title>
+		<meta
+			name="title"
+			content="thewildmage — Open Source Software Engineer"
+		/>
+		<meta
+			property="og:title"
+			content="thewildmage — Open Source Software Engineer"
+		/>
 
-        <meta
-            name="theme-color"
-            content="#b74263"
-            media="(prefers-color-scheme: light)"
-        />
-        <meta
-            name="theme-color"
-            content="#561f2f"
-            media="(prefers-color-scheme: dark)"
-        />
-        <meta name="color-scheme" content="dark light" />
+		<meta
+			name="theme-color"
+			content="#b74263"
+			media="(prefers-color-scheme: light)"
+		/>
+		<meta
+			name="theme-color"
+			content="#561f2f"
+			media="(prefers-color-scheme: dark)"
+		/>
+		<meta
+			name="color-scheme"
+			content="dark light"
+		/>
 
-        <meta
-            name="description"
-            content="About Cecilia, and a portal to her coding projects."
-        />
-        <meta
-            property="og:description"
-            content="About Cecilia, and a portal to her coding projects."
-        />
+		<meta
+			name="description"
+			content="About Cecilia, and a portal to her coding projects."
+		/>
+		<meta
+			property="og:description"
+			content="About Cecilia, and a portal to her coding projects."
+		/>
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://thewildmage.dev" />
-        <link rel="canonical" href="https://thewildmage.dev" />
+		<meta
+			property="og:type"
+			content="website"
+		/>
+		<meta
+			property="og:url"
+			content="https://thewildmage.dev"
+		/>
+		<link
+			rel="canonical"
+			href="https://thewildmage.dev"
+		/>
 
-        <meta
-            property="og:image"
-            content="https://thewildmage.dev/assets/images/dragon/open-graph.png"
-        />
-        <meta
-            property="og:image:alt"
-            content="Outline of a dragon hovering in midair, paused for reflection. Drawn in thick, curving strokes, as if with a fountain pen."
-        />
+		<meta
+			property="og:image"
+			content="https://thewildmage.dev/assets/images/dragon/open-graph.png"
+		/>
+		<meta
+			property="og:image:alt"
+			content="Outline of a dragon hovering in midair, paused for reflection. Drawn in thick, curving strokes, as if with a fountain pen."
+		/>
 
-        <!-- favicon -->
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-            rel="icon"
-            href="/assets/images/dragon/icon.svg"
-            type="image/svg+xml"
-        />
-        <link
-            rel="apple-touch-icon"
-            href="/assets/images/dragon/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="/manifest.webmanifest" />
+		<!-- favicon -->
+		<link
+			rel="icon"
+			href="/favicon.ico"
+			sizes="any"
+		/>
+		<link
+			rel="icon"
+			href="/assets/images/dragon/icon.svg"
+			type="image/svg+xml"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="/assets/images/dragon/apple-touch-icon.png"
+		/>
+		<link
+			rel="manifest"
+			href="/manifest.webmanifest"
+		/>
 
-        <!-- scripts and styles -->
-        <link
-            crossorigin="anonymous"
-            integrity="sha384-ZEnykvpKcqtBhYvsDZKsHFcCphbGlWNx3wG9ycweMcUvL4IMfa0d6gv+JhT45O/X"
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/thewildmage/css-reset@1.0.2/dist/reset.css"
-        />
-        <link
-            rel="stylesheet"
-            href="assets/fonts/young-serif/fonts/webfonts/stylesheet.css"
-        />
-        <link rel="stylesheet" href="assets/css/utopia.css" />
-        <link rel="stylesheet" href="assets/css/main.css" />
+		<!-- scripts and styles -->
+		<link
+			crossorigin="anonymous"
+			integrity="sha384-ZEnykvpKcqtBhYvsDZKsHFcCphbGlWNx3wG9ycweMcUvL4IMfa0d6gv+JhT45O/X"
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/thewildmage/css-reset@1.0.2/dist/reset.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/fonts/young-serif/fonts/webfonts/stylesheet.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/css/utopia.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/css/main.css"
+		/>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-            rel="stylesheet"
-        />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
 
-        <script src="main.js" type="module"></script>
-    </head>
+		<script
+			src="main.js"
+			type="module"
+		></script>
+	</head>
 
-    <body data-theme="system" data-js-available="false">
-        <main class="half-and-half">
-            <svg
-                aria-describedby="dragon-desc"
-                aria-labelledby="dragon-title"
-                class="[ aesthetic-feature ][ reading ][ utility-justify-center ]"
-                focusable="false"
-                role="img"
-                viewBox="0 0 183 300"
-            >
-                <title id="dragon-title">Thoughtful dragon.</title>
-                <desc id="dragon-desc">
-                    Outline of a dragon hovering in midair, paused for
-                    reflection. Drawn in thick, curving strokes, as if with a
-                    fountain pen.
-                </desc>
+	<body
+		data-theme="system"
+		data-js-available="false"
+	>
+		<main class="half-and-half">
+			<svg
+				aria-describedby="dragon-desc"
+				aria-labelledby="dragon-title"
+				class="[ aesthetic-feature ][ reading ][ utility-justify-center ]"
+				focusable="false"
+				role="img"
+				viewBox="0 0 183 300"
+			>
+				<title id="dragon-title">Thoughtful dragon.</title>
+				<desc id="dragon-desc">
+					Outline of a dragon hovering in midair, paused for
+					reflection. Drawn in thick, curving strokes, as if with a
+					fountain pen.
+				</desc>
 
-                <use href="/assets/images/dragon/dragon.svg#dragon" />
-            </svg>
+				<use href="/assets/images/dragon/dragon.svg#dragon" />
+			</svg>
 
-            <article class="[ reading-bg ][ utility-flow ]">
-                <div class="[ reading ][ utility-flow ]">
-                    <h1>I'm Cecilia.</h1>
+			<article class="[ reading-bg ][ utility-flow ]">
+				<div class="[ reading ][ utility-flow ]">
+					<h1>I'm Cecilia.</h1>
 
-                    <p class="utility-type-500">And I'm a software engineer.</p>
+					<p class="utility-type-500">And I'm a software engineer.</p>
 
-                    <p>
-                        You might know me better by my writing alias,
-                        <span class="utility-font-family-display">Daine</span>,
-                        or my favorite username, <code>thewildmage</code>.
-                    </p>
+					<p>
+						You might know me better by my writing alias,
+						<span class="utility-font-family-display">Daine</span>,
+						or my favorite username, <code>thewildmage</code>.
+					</p>
 
-                    <p>
-                        I have a Bachelor of Science in Mathematics and Computer
-                        Science. I have professional experience as both a
-                        software quality assurance engineer and a database
-                        engineer. And I've made a hobby of front-end web
-                        development, where I advocate strongly for
-                        accessibility, inclusivity, usability, and open source.
-                    </p>
+					<p>
+						I have a Bachelor of Science in Mathematics and Computer
+						Science. I have professional experience as both a
+						software quality assurance engineer and a database
+						engineer. And I've made a hobby of front-end web
+						development, where I advocate strongly for
+						accessibility, inclusivity, usability, and open source.
+					</p>
 
-                    <p>
-                        I develop open source resources primarily for the
-                        written RPG community under a collective umbrella I call
-                        <a
-                            class="link"
-                            data-variant="bewilderum"
-                            href="https://magrathea.guide"
-                            >Magrathea</a
-                        >.
-                    </p>
+					<p>
+						I develop open source resources primarily for the
+						written RPG community under a collective umbrella I call
+						<a
+							class="link"
+							data-variant="bewilderum"
+							href="https://magrathea.guide"
+							>Magrathea</a
+						>.
+					</p>
 
-                    <p>
-                        When I'm not helping or teaching, I'm endlessly
-                        enchanted by books and libraries, an eager seeker of
-                        adventure and challenge in video games, and a board game
-                        enthusiast and collector (132 games, 37 expansions and
-                        counting). I love a good rulebook, textbook, or bit of
-                        documentation. Ultimately, I'm a nerdy little engineer
-                        at heart; I'm fascinated to learn what makes things
-                        tick.
-                    </p>
-                </div>
+					<p>
+						When I'm not helping or teaching, I'm endlessly
+						enchanted by books and libraries, an eager seeker of
+						adventure and challenge in video games, and a board game
+						enthusiast and collector (132 games, 37 expansions and
+						counting). I love a good rulebook, textbook, or bit of
+						documentation. Ultimately, I'm a nerdy little engineer
+						at heart; I'm fascinated to learn what makes things
+						tick.
+					</p>
+				</div>
 
-                <h2>Connect</h2>
+				<h2>Connect</h2>
 
-                <ul class="lineup" role="list">
-                    <li>
-                        <code>thewildmage</code> on:
-                        <ul role="list">
-                            <li>
-                                <a
-                                    class="labeled-icon"
-                                    href="https://github.com/thewildmage"
-                                    ><svg
-                                        aria-hidden="true"
-                                        class="icon"
-                                        focusable="false"
-                                    >
-                                        <use
-                                            href="/assets/images/social/github-small.svg#github-small"
-                                        /></svg
-                                    ><span>GitHub</span></a
-                                >
-                            </li>
+				<ul
+					class="lineup"
+					role="list"
+				>
+					<li>
+						<code>thewildmage</code> on:
+						<ul role="list">
+							<li>
+								<a
+									class="labeled-icon"
+									href="https://github.com/thewildmage"
+									><svg
+										aria-hidden="true"
+										class="icon"
+										focusable="false"
+									>
+										<use
+											href="/assets/images/social/github-small.svg#github-small"
+										/></svg
+									><span>GitHub</span></a
+								>
+							</li>
 
-                            <li>
-                                <a
-                                    class="labeled-icon"
-                                    href="https://codepen.io/thewildmage"
-                                    ><svg
-                                        aria-hidden="true"
-                                        class="icon"
-                                        focusable="false"
-                                    >
-                                        <use
-                                            href="/assets/images/social/codepen.svg#codepen"
-                                        /></svg
-                                    ><span>CodePen</span></a
-                                >
-                            </li>
+							<li>
+								<a
+									class="labeled-icon"
+									href="https://codepen.io/thewildmage"
+									><svg
+										aria-hidden="true"
+										class="icon"
+										focusable="false"
+									>
+										<use
+											href="/assets/images/social/codepen.svg#codepen"
+										/></svg
+									><span>CodePen</span></a
+								>
+							</li>
 
-                            <li>
-                                <a
-                                    class="labeled-icon"
-                                    href="https://glitch.com/@thewildmage"
-                                    ><svg
-                                        aria-hidden="true"
-                                        class="icon"
-                                        focusable="false"
-                                    >
-                                        <use
-                                            href="/assets/images/social/glitch-monochrome.svg#glitch-monochrome"
-                                        /></svg
-                                    ><span>Glitch</span></a
-                                >
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <code>thewildmage#1078</code> on:
-                        <ul role="list">
-                            <li>
-                                <div class="labeled-icon">
-                                    <svg
-                                        aria-hidden="true"
-                                        class="icon"
-                                        focusable="false"
-                                    >
-                                        <use
-                                            href="/assets/images/social/discord.svg#discord"
-                                        /></svg
-                                    ><span>Discord</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+							<li>
+								<a
+									class="labeled-icon"
+									href="https://glitch.com/@thewildmage"
+									><svg
+										aria-hidden="true"
+										class="icon"
+										focusable="false"
+									>
+										<use
+											href="/assets/images/social/glitch-monochrome.svg#glitch-monochrome"
+										/></svg
+									><span>Glitch</span></a
+								>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<code>thewildmage#1078</code> on:
+						<ul role="list">
+							<li>
+								<div class="labeled-icon">
+									<svg
+										aria-hidden="true"
+										class="icon"
+										focusable="false"
+									>
+										<use
+											href="/assets/images/social/discord.svg#discord"
+										/></svg
+									><span>Discord</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
 
-                <h2>My Projects</h2>
+				<h2>My Projects</h2>
 
-                <ul class="lineup" role="list">
-                    <li>
-                        <a
-                            aria-labelledby="magrathea-title"
-                            class="link"
-                            data-variant="darkflight"
-                            href="https://magrathea.guide"
-                            ><svg
-                                aria-labelledby="magrathea-title"
-                                class="project-logo"
-                                role="img"
-                                viewBox="0 0 1300 680"
-                            >
-                                <!-- prettier-ignore -->
-                                <title id="magrathea-title">Magrathea</title>
+				<ul
+					class="lineup"
+					role="list"
+				>
+					<li>
+						<a
+							aria-labelledby="magrathea-title"
+							class="link"
+							data-variant="darkflight"
+							href="https://magrathea.guide"
+							><svg
+								aria-labelledby="magrathea-title"
+								class="project-logo"
+								role="img"
+								viewBox="0 0 1300 680"
+							>
+								<!-- prettier-ignore -->
+								<title id="magrathea-title">Magrathea</title>
 
-                                <use
-                                    href="/assets/images/magrathea/magrathea.svg#name"
-                                />
+								<use
+									href="/assets/images/magrathea/magrathea.svg#name"
+								/>
 
-                                <use
-                                    fill="url(#_magratheaGradient)"
-                                    href="/assets/images/magrathea/magrathea.svg#icon"
-                                /></svg
-                        ></a>
-                    </li>
-                </ul>
+								<use
+									fill="url(#_magratheaGradient)"
+									href="/assets/images/magrathea/magrathea.svg#icon"
+								/></svg
+						></a>
+					</li>
+				</ul>
 
-                <h2>Buy Me a Coffee</h2>
+				<h2>Buy Me a Coffee</h2>
 
-                <ul class="lineup" role="list">
-                    <li>
-                        <a
-                            class="labeled-icon"
-                            href="https://github.com/sponsors/thewildmage"
-                            ><svg
-                                aria-hidden="true"
-                                class="icon"
-                                focusable="false"
-                            >
-                                <use
-                                    href="/assets/images/social/github-small.svg#github-small"
-                                /></svg
-                            ><span>GitHub Sponsors</span></a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="labeled-icon"
-                            href="https://ko-fi.com/thewildmage"
-                            ><svg
-                                aria-hidden="true"
-                                class="icon"
-                                focusable="false"
-                                role="img"
-                            >
-                                <use
-                                    href="/assets/images/social/ko-fi.svg#ko-fi"
-                                /></svg
-                            ><span>Ko-fi</span></a
-                        >
-                    </li>
-                </ul>
-            </article>
-        </main>
+				<ul
+					class="lineup"
+					role="list"
+				>
+					<li>
+						<a
+							class="labeled-icon"
+							href="https://github.com/sponsors/thewildmage"
+							><svg
+								aria-hidden="true"
+								class="icon"
+								focusable="false"
+							>
+								<use
+									href="/assets/images/social/github-small.svg#github-small"
+								/></svg
+							><span>GitHub Sponsors</span></a
+						>
+					</li>
+					<li>
+						<a
+							class="labeled-icon"
+							href="https://ko-fi.com/thewildmage"
+							><svg
+								aria-hidden="true"
+								class="icon"
+								focusable="false"
+								role="img"
+							>
+								<use
+									href="/assets/images/social/ko-fi.svg#ko-fi"
+								/></svg
+							><span>Ko-fi</span></a
+						>
+					</li>
+				</ul>
+			</article>
+		</main>
 
-        <footer
-            class="[ utility-bg-dark utility-color-light utility-type-300 ][ js-only ]"
-        >
-            <h2 class="utility-visually-hidden">Controls</h2>
+		<footer
+			class="[ utility-bg-dark utility-color-light utility-type-300 ][ js-only ]"
+		>
+			<h2 class="utility-visually-hidden">Controls</h2>
 
-            <fieldset id="js-theme-control">
-                <legend class="utility-visually-hidden" id="theme-group-label">
-                    Theme
-                </legend>
+			<fieldset id="js-theme-control">
+				<legend
+					class="utility-visually-hidden"
+					id="theme-group-label"
+				>
+					Theme
+				</legend>
 
-                <span aria-hidden="true">Theme:</span>
+				<span aria-hidden="true">Theme:</span>
 
-                <button
-                    aria-labelledby="theme-light theme-group-label"
-                    aria-pressed="false"
-                    id="theme-light"
-                    name="theme"
-                    type="button"
-                    value="light"
-                >
-                    Light
-                </button>
-                <button
-                    aria-labelledby="theme-dark theme-group-label"
-                    aria-pressed="false"
-                    id="theme-dark"
-                    name="theme"
-                    type="button"
-                    value="dark"
-                >
-                    Dark
-                </button>
-                <button
-                    aria-labelledby="theme-system theme-group-label"
-                    aria-pressed="true"
-                    id="theme-system"
-                    name="theme"
-                    type="button"
-                    value="system"
-                >
-                    Match System
-                </button>
-            </fieldset>
-        </footer>
+				<button
+					aria-labelledby="theme-light theme-group-label"
+					aria-pressed="false"
+					id="theme-light"
+					name="theme"
+					type="button"
+					value="light"
+				>
+					Light
+				</button>
+				<button
+					aria-labelledby="theme-dark theme-group-label"
+					aria-pressed="false"
+					id="theme-dark"
+					name="theme"
+					type="button"
+					value="dark"
+				>
+					Dark
+				</button>
+				<button
+					aria-labelledby="theme-system theme-group-label"
+					aria-pressed="true"
+					id="theme-system"
+					name="theme"
+					type="button"
+					value="system"
+				>
+					Match System
+				</button>
+			</fieldset>
+		</footer>
 
-        <!--
+		<!--
             needs to be inline because:
             gradients don't get pulled in with <use href="/external.svg"> in Chromium,
             and <img src="*.svg" /> doesn't support (prefers-color-scheme: dark) in Safari
         -->
-        <svg
-            aria-hidden="true"
-            class="utility-visually-hidden"
-            viewBox="0 0 1300 680"
-        >
-            <defs>
-                <linearGradient
-                    id="_magratheaGradient"
-                    x1="0"
-                    y1="0"
-                    x2="1"
-                    y2="0"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="matrix(416.121,158.482,-158.482,416.121,423.725,3.2955)"
-                >
-                    <stop
-                        offset="0"
-                        style="stop-color: #5f2517; stop-opacity: 1"
-                    />
-                    <stop
-                        offset="1"
-                        style="stop-color: #cab08d; stop-opacity: 1"
-                    />
-                </linearGradient>
-            </defs>
-        </svg>
-    </body>
+		<svg
+			aria-hidden="true"
+			class="utility-visually-hidden"
+			viewBox="0 0 1300 680"
+		>
+			<defs>
+				<linearGradient
+					id="_magratheaGradient"
+					x1="0"
+					y1="0"
+					x2="1"
+					y2="0"
+					gradientUnits="userSpaceOnUse"
+					gradientTransform="matrix(416.121,158.482,-158.482,416.121,423.725,3.2955)"
+				>
+					<stop
+						offset="0"
+						style="stop-color: #5f2517; stop-opacity: 1"
+					/>
+					<stop
+						offset="1"
+						style="stop-color: #cab08d; stop-opacity: 1"
+					/>
+				</linearGradient>
+			</defs>
+		</svg>
+	</body>
 </html>
