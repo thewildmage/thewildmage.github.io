@@ -8,10 +8,10 @@ Turning off this setting enables me to group custom properties however I see fit
 
 ```css
 .blah {
-    --color-a: pink;
-    --color-b: teal;
+	--color-a: pink;
+	--color-b: teal;
 
-    --size-400: 1rem;
+	--size-400: 1rem;
 }
 ```
 
