@@ -1,3 +1,12 @@
 ---
 quoteProps: consistent
+singleAttributePerLine: true
 tabWidth: 4
+trailingComma: all
+useTabs: true
+overrides:
+  - files:
+      - "*.yml"
+      - "*.yaml"
+    options:
+      tabWidth: 2
