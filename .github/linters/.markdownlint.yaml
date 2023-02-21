@@ -1,9 +1,10 @@
 ---
 default: true
 
-MD007:
-    indent: 4 # Unordered list indentation
-MD013: false # Line length limit
-MD030:
+"line-length": false
+"list-marker-space":
     ul_single: 3
-    ul_multi: 3 # Ordered list indentation
+    ul_multi: 3
+"no-hard-tabs": false
+"ul-indent":
+    indent: 4
