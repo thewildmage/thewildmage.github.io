@@ -108,9 +108,7 @@ a:hover {
 	/* HACK: you must change color to get text-decoration-thickness to change due to Safari bug */
 	color: var(--if-light-theme-then, var(--color-primary-darkest))
 		var(--if-dark-theme-then, var(--color-primary-lightest));
-	-webkit-text-decoration-skip: none;
 	text-decoration-skip: none;
-	-webkit-text-decoration-skip-ink: none;
 	text-decoration-skip-ink: none;
 	text-decoration-thickness: var(--border-thick);
 }
