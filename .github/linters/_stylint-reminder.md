@@ -2,7 +2,9 @@
 
 For my future self, so I'll stop forgetting why exactly I added certain settings to [`.stylelintrc.json`](.stylelintrc.json).
 
-## `custom-property-empty-line-before`
+TODO: Stylelint v15 is now available, and it [deprecates all stylistic rules](https://stylelint.io/migration-guide/to-15). [Super-Linter hasn't yet updated past v14](https://github.com/github/super-linter/blob/main/dependencies/package.json), but when it does, I should revisit and remove deprecated rules.
+
+## `custom-property-empty-line-before`: null
 
 Turning off this setting enables me to group custom properties however I see fit, which is especially beneficial in cases like:
 
@@ -17,7 +19,7 @@ Turning off this setting enables me to group custom properties however I see fit
 
 The gap between variables is made clear by the change in naming convention. Adding a comment about the `--size-400` variable here, as was required when this rule was turned on, just creates excess fluff.
 
-## `declaration-colon-newline-after`
+## `declaration-colon-newline-after`: null
 
 Conflicts with Prettier. For example, the following is as formatted by Prettier, but will trip an error on any but the `null` configuration of this rule:
 
@@ -28,6 +30,22 @@ Conflicts with Prettier. For example, the following is as formatted by Prettier,
 	);
 }
 ```
+
+## `indentation`: null
+
+Conflicts with Prettier in instances like:
+
+```css
+.conflict {
+	background: linear-gradient(
+			to right,
+			var(--color-primary-darker),
+			var(--color-secondary-darker)
+		) border-box;
+}
+```
+
+Turning this off allows Prettier to take over full control of indentation decisions.
 
 ## `order/order`
 

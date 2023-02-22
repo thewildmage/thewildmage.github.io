@@ -6,7 +6,7 @@
 	"rules": {
 		"custom-property-empty-line-before": null,
 		"declaration-colon-newline-after": null,
-		"indentation": "tab",
+		"indentation": null,
 		"order/order": [
 			"custom-properties",
 			"declarations",

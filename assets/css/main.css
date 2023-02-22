@@ -122,7 +122,7 @@ button {
 		border-box;
 	border: var(--border-thick) solid var(--color-primary);
 	border-radius: var(--border-radius);
-	color: currentColor;
+	color: currentcolor;
 	padding-block: 0;
 	padding-inline: var(--space-100);
 }
@@ -148,7 +148,7 @@ button[aria-pressed="false"]:not([disabled]):hover {
 
 button[aria-pressed="false"]:not([disabled]):focus,
 button[aria-pressed="false"]:not([disabled]):hover {
-	border-color: currentColor;
+	border-color: currentcolor;
 }
 
 fieldset {
@@ -176,6 +176,7 @@ h6 {
 h1 {
 	background: var(--if-light-theme-then, var(--gradient-text-dark))
 		var(--if-dark-theme-then, var(--gradient-text-light));
+	/* stylelint-disable-next-line property-no-vendor-prefix */
 	-webkit-background-clip: text;
 	background-clip: text;
 	font-size: var(--type-900);
@@ -347,7 +348,7 @@ BLOCKS
 .reading-bg::before {
 	background: linear-gradient(
 		var(--gradient-direction),
-		hsl(var(--color-bg-local-raw) / 0),
+		hsl(var(--color-bg-local-raw) / 0%),
 		var(--color-bg-local)
 	); /* can't use transparent here because of Safari */
 
@@ -408,7 +409,7 @@ UTILITIES
 }
 
 /* Courtesy of https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
-.utility-visually-hidden:not(:focus):not(:active) {
+.utility-visually-hidden:not(:active, :focus) {
 	block-size: 1px;
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
