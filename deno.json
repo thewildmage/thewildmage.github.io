@@ -1,5 +1,7 @@
 {
-  "importMap": "import_map.json",
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.11.4/"
+  },
   "tasks": {
     "lume": "deno eval \"import 'lume/task.ts'\" --",
     "build": "deno task lume",
