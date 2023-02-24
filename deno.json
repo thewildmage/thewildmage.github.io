@@ -3,8 +3,8 @@
     "lume/": "https://deno.land/x/lume@v1.11.4/"
   },
   "tasks": {
-    "lume": "deno eval \"import 'lume/task.ts'\" --",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --allow-read=./ --allow-write=./_distribution --allow-net=0.0.0.0:3000,cdn.deno.land --allow-sys -",
     "build": "deno task lume",
-    "serve": "deno task lume -s"
+    "serve": "deno task lume --serve"
   }
 }
