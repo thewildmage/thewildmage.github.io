@@ -5,7 +5,7 @@ import { formatWithPrettier } from "plugins/format.js";
 
 const site = lume({
 	dest: "./_distribution",
-	src: "./source"
+	src: "./source",
 });
 
 site.copy("favicon.ico")
@@ -14,7 +14,6 @@ site.copy("favicon.ico")
 	.loadPages([".html"])
 	.loadAssets([".css", ".js"])
 	.use(anchorHeadings)
-	.process([".css", ".html", ".js"], formatWithPrettier)
-;
+	.process([".css", ".html", ".js"], formatWithPrettier);
 
 export default site;
