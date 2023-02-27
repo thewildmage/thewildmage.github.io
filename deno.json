@@ -1,6 +1,6 @@
 {
   "imports": {
-    "plugins/": "https://cdn.jsdelivr.net/gh/thewildmage/dotfiles@3.1.0/lume/plugins/",
+    "plugins/": "https://cdn.jsdelivr.net/gh/thewildmage/dotfiles@3.2.0/lume/plugins/",
     "lume/": "https://deno.land/x/lume@v1.15.3/",
     "prettier": "npm:prettier@3.0.0-alpha.4"
   },
