@@ -1,10 +1,13 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.11.4/"
+    "plugins/": "https://cdn.jsdelivr.net/gh/thewildmage/dotfiles@3.1.0/lume/plugins/",
+    "lume/": "https://deno.land/x/lume@v1.15.3/",
+    "prettier": "npm:prettier@3.0.0-alpha.4"
   },
   "tasks": {
-    "lume": "echo \"import 'lume/cli.ts'\" | deno run --allow-read=./ --allow-write=./_distribution --allow-net=0.0.0.0:3000,cdn.deno.land --allow-sys -",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --allow-read --allow-write=./_distribution --allow-net=0.0.0.0:3000,cdn.deno.land,cdn.jsdelivr.net,deno.land --allow-env --allow-sys -",
     "build": "deno task lume",
+    "cache:rebuild": "rm ./deno.lock && deno cache --reload _config.js",
     "serve": "deno task lume --serve"
   }
 }
