@@ -41,7 +41,8 @@ Conflicts with Prettier in instances like:
 			to right,
 			var(--color-primary-darker),
 			var(--color-secondary-darker)
-		) border-box;
+		)
+		border-box;
 }
 ```
 

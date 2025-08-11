@@ -6,11 +6,11 @@ Content in this repository falls under multiple different licenses.
 
 The following social icons are used in accordance with their company's press or branding kits:
 
--   The [CodePen](https://codepen.io) icon comes from [CodePen's logos](https://blog.codepen.io/documentation/logos/)
--   The [Discord](https://discord.com) icon comes from [Discord's media kit](https://discord.com/branding)
--   The [GitHub](https://github.com) icon comes from [GitHub Logos and Usage](https://github.com/logos)
--   The [Glitch](https://glitch.com) icon comes from [Glitch's brand assets](https://glitch.com/about/press)
--   The [Ko-fi](https://ko-fi.com) icon comes from [Ko-fi's creator kit](https://more.ko-fi.com/brand-assets)
+- The [CodePen](https://codepen.io) icon comes from [CodePen's logos](https://blog.codepen.io/documentation/logos/)
+- The [Discord](https://discord.com) icon comes from [Discord's media kit](https://discord.com/branding)
+- The [GitHub](https://github.com) icon comes from [GitHub Logos and Usage](https://github.com/logos)
+- The [Glitch](https://glitch.com) icon comes from [Glitch's brand assets](https://glitch.com/about/press)
+- The [Ko-fi](https://ko-fi.com) icon comes from [Ko-fi's creator kit](https://more.ko-fi.com/brand-assets)
 
 All rights reserved.
 
@@ -32,8 +32,8 @@ The [Sling font](https://www.fontsquirrel.com/fonts/Sling) used in the Magrathea
 
 The following fonts are used:
 
--   [Merriweather](https://fonts.google.com/specimen/Merriweather) by Sorkin Type, licensed under the [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL)
--   [Young Serif](https://github.com/noirblancrouge/YoungSerif) by Noir Blanc Rouge, licensed under the [SIL Open Font License, Version 1.1](https://github.com/noirblancrouge/YoungSerif/blob/9d072345d60ec0b87fcc22bdeca84e62222edfbd/LICENSE.txt)
+- [Merriweather](https://fonts.google.com/specimen/Merriweather) by Sorkin Type, licensed under the [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL)
+- [Young Serif](https://github.com/noirblancrouge/YoungSerif) by Noir Blanc Rouge, licensed under the [SIL Open Font License, Version 1.1](https://github.com/noirblancrouge/YoungSerif/blob/9d072345d60ec0b87fcc22bdeca84e62222edfbd/LICENSE.txt)
 
 ## Remaining
 
